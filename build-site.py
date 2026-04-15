@@ -190,23 +190,6 @@ def inline_format(text):
 
 def wrap_page(title, body_html, nav_html, is_gv=False):
     """Wrap content in full HTML page with nav."""
-    gv_script = ""
-    if is_gv:
-        gv_script = f"""
-    <script>
-    (function() {{
-        var stored = sessionStorage.getItem('gv_auth');
-        if (stored !== 'ok') {{
-            var pw = prompt('Nhập mật khẩu giảng viên:');
-            if (pw !== '{GV_PASSWORD}') {{
-                document.body.innerHTML = '<div style="text-align:center;padding:100px"><h1>Sai mật khẩu</h1><p>Vui lòng liên hệ ban tổ chức.</p><a href="/">← Về trang chủ</a></div>';
-                return;
-            }}
-            sessionStorage.setItem('gv_auth', 'ok');
-        }}
-    }})();
-    </script>"""
-
     og_title = f"{title} — Đào Tạo AI CPMI"
     og_desc = "Chương trình đào tạo ứng dụng AI (Google Gemini & NotebookLM) cho ngành xây dựng và quản lý dự án. Tài liệu hướng dẫn, prompt templates, bài tập thực hành quy trình CBDA."
     og_img = "https://cpmi.vn/uploads/banners/22-logo.png"
@@ -237,7 +220,6 @@ def wrap_page(title, body_html, nav_html, is_gv=False):
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    {gv_script}
     <div class="layout">
         <nav class="sidebar" id="sidebar">
             <div class="sidebar-header">

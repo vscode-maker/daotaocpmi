@@ -24,20 +24,6 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    
-    <script>
-    (function() {
-        var stored = sessionStorage.getItem('gv_auth');
-        if (stored !== 'ok') {
-            var pw = prompt('Nhập mật khẩu giảng viên:');
-            if (pw !== 'gvcpmi2026') {
-                document.body.innerHTML = '<div style="text-align:center;padding:100px"><h1>Sai mật khẩu</h1><p>Vui lòng liên hệ ban tổ chức.</p><a href="/">← Về trang chủ</a></div>';
-                return;
-            }
-            sessionStorage.setItem('gv_auth', 'ok');
-        }
-    })();
-    </script>
     <div class="layout">
         <nav class="sidebar" id="sidebar">
             <div class="sidebar-header">
