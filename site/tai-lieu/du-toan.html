@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dự Toán Chi Phí CBDA — Đào Tạo AI CPMI</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    
+    <div class="layout">
+        <nav class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h2>Dao Tao AI</h2>
+                <p class="subtitle">Google Gemini & NotebookLM</p>
+                <button class="menu-close" onclick="toggleMenu()">&times;</button>
+            </div>
+            <div class="nav-section"><h3>HOC VIEN</h3><ul><li><a href="/index.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span>Trang chu</a></li><li><a href="/agenda.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span>Lich trinh 2 ngay</a></li></ul></div><div class="nav-section"><h3>HUONG DAN NHANH</h3><ul><li><a href="/qrg-gemini.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M12 2L9 12l-7 3 7 3 3 10 3-10 7-3-7-3z"/></svg></span>Gemini Workspace</a></li><li><a href="/qrg-notebooklm.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>NotebookLM</a></li><li><a href="/prompts.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>Prompt Templates</a></li><li><a href="/checklist.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>Checklist Bao Mat</a></li></ul></div><div class="nav-section"><h3>TAI LIEU THUC HANH</h3><ul><li><a href="/tai-lieu/to-trinh.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>To trinh CTrDT</a></li><li><a href="/tai-lieu/bao-cao.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg></span>BC de xuat CTrDT</a></li><li><a href="/tai-lieu/du-toan.html" class="active"><span class="nav-icon"><svg viewBox="0 0 24 24"><circle cx="8" cy="8" r="6"/><path d="M18.09 10.37A6 6 0 1 1 10.34 18"/><line x1="7" y1="6" x2="7.01" y2="6"/><line x1="16" y1="12" x2="16.01" y2="12"/></svg></span>Du toan CBDA</a></li><li><a href="/tai-lieu/ke-hoach-lcnt.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg></span>KH LCNT</a></li><li><a href="/tai-lieu/email.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>Email tham dinh</a></li><li><a href="/tai-lieu/y-kien.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></span>Y kien so nganh</a></li><li><a href="/tai-lieu/nhiem-vu-ks.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>Nhiem vu khao sat</a></li><li><a href="/tai-lieu/khoi-luong.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M21.71 5.29l-3-3a1 1 0 0 0-1.42 0l-14 14a1 1 0 0 0 0 1.42l3 3a1 1 0 0 0 1.42 0l14-14a1 1 0 0 0 0-1.42z"/><line x1="7" y1="13.5" x2="9.5" y2="11"/><line x1="10" y1="10.5" x2="12.5" y2="8"/><line x1="13" y1="7.5" x2="15.5" y2="5"/></svg></span>Khoi luong KS</a></li></ul></div><div class="nav-section"><h3>GIANG VIEN</h3><ul><li><a href="/giang-vien/index.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 3 3 6 3s6-1 6-3v-5"/></svg></span>Portal Giang Vien</a></li><li><a href="/giang-vien/kich-ban-ngay-1.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>Kich ban Ngay 1</a></li><li><a href="/giang-vien/kich-ban-ngay-2.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>Kich ban Ngay 2</a></li><li><a href="/giang-vien/plan.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg></span>Ke hoach tong the</a></li><li><a href="/giang-vien/checklist-to-chuc.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></span>Checklist to chuc</a></li></ul></div>
+        </nav>
+        <main class="content">
+            <button class="menu-toggle" onclick="toggleMenu()"><svg viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg> Menu</button>
+            <article>
+                <p>UBND QUẬN BẮC TỪ LIÊM</p>
+<p>BAN QUẢN LÝ DỰ ÁN ĐẦU TƯ XÂY DỰNG QUẬN</p>
+<p>CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</p>
+<p>Độc lập - Tự do - Hạnh phúc</p>
+
+<hr>
+
+<h1>DỰ TOÁN CHI PHÍ GIAI ĐOẠN CHUẨN BỊ ĐẦU TƯ</h1>
+
+<p><strong>Dự án</strong>: Cải tạo nâng cấp Trụ sở UBND phường Đông Ngạc, quận Bắc Từ Liêm, Hà Nội</p>
+<p><strong>Chủ đầu tư</strong>: UBND phường Đông Ngạc</p>
+<p><strong>Giai đoạn lập</strong>: Chuẩn bị đầu tư (CBDA)</p>
+<p><strong>Căn cứ lập</strong>: Nghị định 85/2025/NĐ-CP; Thông tư 11/2021/TT-BXD; Bảng giá tư vấn xây dựng Hà Nội năm 2024</p>
+
+<hr>
+
+<h2>BẢNG DỰ TOÁN CHI PHÍ CBDA</h2>
+
+<div class="table-wrap"><table>
+<tr><th>STT</th><th>Hạng mục chi phí</th><th>Đơn vị tính</th><th>Khối lượng</th><th>Đơn giá (đồng)</th><th>Thành tiền (đồng)</th><th>Ghi chú</th></tr>
+<tr><td><strong>I</strong></td><td><strong>Chi phí khảo sát xây dựng</strong></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>1</td><td>Tư vấn lập nhiệm vụ khảo sát địa hình</td><td>Gói</td><td>1</td><td>8.500.000</td><td>8.500.000</td><td>Theo TT 10/2021/TT-BXD</td></tr>
+<tr><td>2</td><td>Tư vấn lập nhiệm vụ khảo sát địa chất</td><td>Gói</td><td>1</td><td>7.000.000</td><td>7.000.000</td><td>Theo TT 10/2021/TT-BXD</td></tr>
+<tr><td>3</td><td>Khảo sát địa hình tỷ lệ 1/500</td><td>m²</td><td>1.500</td><td>38.000</td><td>57.000.000</td><td>Khuôn viên ~1.200m² + vùng lân cận</td></tr>
+<tr><td>4</td><td>Khảo sát địa chất công trình (khoan thăm dò, thí nghiệm)</td><td>Gói</td><td>1</td><td>95.000.000</td><td>95.000.000</td><td>4 hố khoan, thí nghiệm SPT + mẫu đất</td></tr>
+<tr><td>5</td><td>Tư vấn giám sát khảo sát xây dựng</td><td>Gói</td><td>1</td><td>18.500.000</td><td>18.500.000</td><td>Giám sát toàn bộ công tác khảo sát</td></tr>
+<tr><td><strong>II</strong></td><td><strong>Chi phí tư vấn hành chính – kỹ thuật</strong></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>6</td><td>Tư vấn xin cấp chỉ giới đường đỏ + số liệu hạ tầng kỹ thuật</td><td>Gói</td><td>1</td><td>22.000.000</td><td>22.000.000</td><td>Làm việc với Sở QHKT Hà Nội</td></tr>
+<tr><td>7</td><td>Tư vấn đánh giá tác động môi trường (ĐTM / Cam kết BVMT)</td><td>Gói</td><td>1</td><td>45.000.000</td><td>45.000.000</td><td>Dự án nhóm C – lập Cam kết BVMT</td></tr>
+<tr><td><strong>III</strong></td><td><strong>Chi phí tư vấn thiết kế và thẩm tra</strong></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>8</td><td>Tư vấn lập Báo cáo kinh tế kỹ thuật (BCKTKT)</td><td>Gói</td><td>1</td><td>380.000.000</td><td>380.000.000</td><td>Bao gồm thiết kế BVTC + dự toán</td></tr>
+<tr><td>9</td><td>Tư vấn thẩm tra BCKTKT (thiết kế + dự toán)</td><td>Gói</td><td>1</td><td>68.000.000</td><td>68.000.000</td><td>Đơn vị tư vấn độc lập</td></tr>
+<tr><td>10</td><td>Tư vấn lập mô hình thông tin công trình (BIM – Level 2)</td><td>Gói</td><td>1</td><td>120.000.000</td><td>120.000.000</td><td>Theo lộ trình BIM Bộ Xây dựng 2025</td></tr>
+<tr><td><strong>IV</strong></td><td><strong>Chi phí khác</strong></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>11</td><td>Chi phí in ấn, photo tài liệu, hồ sơ trình thẩm định</td><td>Gói</td><td>1</td><td>12.000.000</td><td>12.000.000</td><td>In 10 bộ hồ sơ BCKTKT</td></tr>
+<tr><td>12</td><td>Chi phí đi lại, công tác phí phục vụ CBDA</td><td>Gói</td><td>1</td><td>15.000.000</td><td>15.000.000</td><td>Làm việc với các sở ngành, thẩm định</td></tr>
+<tr><td>13</td><td>Chi phí họp, hội nghị, lấy ý kiến</td><td>Gói</td><td>1</td><td>8.000.000</td><td>8.000.000</td><td>3–4 cuộc họp với sở ngành</td></tr>
+<tr><td><strong>V</strong></td><td><strong>Chi phí dự phòng (10%)</strong></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>14</td><td>Dự phòng phát sinh</td><td>%</td><td>10%</td><td>—</td><td>85.500.000</td><td>10% tổng chi phí I–IV</td></tr>
+<tr><td></td><td><strong>TỔNG CỘNG</strong></td><td></td><td></td><td></td><td><strong>940.500.000</strong></td><td></td></tr>
+</table></div>
+
+<hr>
+
+<h2>GHI CHÚ VÀ THUYẾT MINH</h2>
+
+<h3>Cơ sở xác định đơn giá</h3>
+
+<ul>
+<li><strong>Chi phí khảo sát địa hình</strong>: Áp dụng Bảng giá sản phẩm đo đạc bản đồ ban hành kèm theo Thông tư 08/2018/TT-BTNMT, điều chỉnh theo hệ số vùng đô thị Hà Nội (k=1,25).</li>
+</ul>
+
+<ul>
+<li><strong>Chi phí khảo sát địa chất</strong>: Theo định mức đơn giá khảo sát địa chất của Bộ Xây dựng, bao gồm: 4 hố khoan độ sâu 15m; thí nghiệm SPT 5 lần/hố; lấy và thí nghiệm 20 mẫu đất nguyên dạng trong phòng.</li>
+</ul>
+
+<ul>
+<li><strong>Chi phí lập BCKTKT</strong>: Tính theo tỷ lệ % chi phí xây dựng theo Thông tư 11/2021/TT-BXD, Bảng 2.3 – Chi phí thiết kế bản vẽ thi công công trình dân dụng cải tạo cấp III: ~3,3% × 11,5 tỷ ≈ 380 triệu.</li>
+</ul>
+
+<ul>
+<li><strong>Chi phí thẩm tra BCKTKT</strong>: Theo định mức Thông tư 11/2021/TT-BXD, Bảng 2.6 – Chi phí thẩm tra thiết kế và dự toán: ~0,6% × 11,5 tỷ ≈ 68 triệu.</li>
+</ul>
+
+<ul>
+<li><strong>Chi phí BIM</strong>: Áp dụng theo Quyết định 258/QĐ-BXD ngày 20/3/2023 về lộ trình BIM, chi phí lập mô hình BIM Level 2 cho công trình cải tạo cấp III: ~1% chi phí xây dựng.</li>
+</ul>
+
+<ul>
+<li><strong>Chi phí tư vấn môi trường</strong>: Công trình cải tạo diện tích sàn <10.000 m², lập Cam kết BVMT theo Nghị định 08/2022/NĐ-CP.</li>
+</ul>
+
+<h3>Phân bổ theo năm ngân sách</h3>
+
+<div class="table-wrap"><table>
+<tr><th>Năm</th><th>Hạng mục</th><th>Giá trị (đồng)</th></tr>
+<tr><td>2025</td><td>Toàn bộ chi phí CBDA</td><td>940.500.000</td></tr>
+<tr><td><strong>Tổng</strong></td><td></td><td><strong>940.500.000</strong></td></tr>
+</table></div>
+
+<h3>Hình thức lựa chọn nhà thầu</h3>
+
+<div class="table-wrap"><table>
+<tr><th>Gói thầu</th><th>Hình thức LCNT</th></tr>
+<tr><td>Khảo sát địa hình + địa chất</td><td>Chỉ định thầu (giá trị < 500 triệu, nhóm C)</td></tr>
+<tr><td>Lập BCKTKT</td><td>Chỉ định thầu (giá trị < 500 triệu, nhóm C)</td></tr>
+<tr><td>Thẩm tra BCKTKT</td><td>Chỉ định thầu (giá trị < 500 triệu)</td></tr>
+<tr><td>BIM</td><td>Chỉ định thầu (giá trị < 500 triệu)</td></tr>
+</table></div>
+
+<p><em>(Căn cứ Điều 23 Luật Đấu thầu số 22/2023/QH15 và Nghị định 24/2024/NĐ-CP)</em></p>
+
+<hr>
+
+<p><em>Lập dự toán: Phòng Kỹ thuật – Ban QLDA quận Bắc Từ Liêm</em></p>
+<p><em>Ngày lập: 22/03/2025</em></p>
+<p><em>Người lập: KS. Lê Thị Hương</em></p>
+<p><em>Kiểm tra: KS. Phạm Văn Hùng</em></p>
+
+            </article>
+        </main>
+    </div>
+    <script>
+    function toggleMenu() {
+        document.getElementById('sidebar').classList.toggle('open');
+    }
+    </script>
+</body>
+</html>

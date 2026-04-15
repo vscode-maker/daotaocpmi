@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khối Lượng Khảo Sát — Đào Tạo AI CPMI</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    
+    <div class="layout">
+        <nav class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h2>Dao Tao AI</h2>
+                <p class="subtitle">Google Gemini & NotebookLM</p>
+                <button class="menu-close" onclick="toggleMenu()">&times;</button>
+            </div>
+            <div class="nav-section"><h3>HOC VIEN</h3><ul><li><a href="/index.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span>Trang chu</a></li><li><a href="/agenda.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span>Lich trinh 2 ngay</a></li></ul></div><div class="nav-section"><h3>HUONG DAN NHANH</h3><ul><li><a href="/qrg-gemini.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M12 2L9 12l-7 3 7 3 3 10 3-10 7-3-7-3z"/></svg></span>Gemini Workspace</a></li><li><a href="/qrg-notebooklm.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>NotebookLM</a></li><li><a href="/prompts.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>Prompt Templates</a></li><li><a href="/checklist.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>Checklist Bao Mat</a></li></ul></div><div class="nav-section"><h3>TAI LIEU THUC HANH</h3><ul><li><a href="/tai-lieu/to-trinh.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>To trinh CTrDT</a></li><li><a href="/tai-lieu/bao-cao.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg></span>BC de xuat CTrDT</a></li><li><a href="/tai-lieu/du-toan.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><circle cx="8" cy="8" r="6"/><path d="M18.09 10.37A6 6 0 1 1 10.34 18"/><line x1="7" y1="6" x2="7.01" y2="6"/><line x1="16" y1="12" x2="16.01" y2="12"/></svg></span>Du toan CBDA</a></li><li><a href="/tai-lieu/ke-hoach-lcnt.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg></span>KH LCNT</a></li><li><a href="/tai-lieu/email.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>Email tham dinh</a></li><li><a href="/tai-lieu/y-kien.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></span>Y kien so nganh</a></li><li><a href="/tai-lieu/nhiem-vu-ks.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>Nhiem vu khao sat</a></li><li><a href="/tai-lieu/khoi-luong.html" class="active"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M21.71 5.29l-3-3a1 1 0 0 0-1.42 0l-14 14a1 1 0 0 0 0 1.42l3 3a1 1 0 0 0 1.42 0l14-14a1 1 0 0 0 0-1.42z"/><line x1="7" y1="13.5" x2="9.5" y2="11"/><line x1="10" y1="10.5" x2="12.5" y2="8"/><line x1="13" y1="7.5" x2="15.5" y2="5"/></svg></span>Khoi luong KS</a></li></ul></div><div class="nav-section"><h3>GIANG VIEN</h3><ul><li><a href="/giang-vien/index.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 3 3 6 3s6-1 6-3v-5"/></svg></span>Portal Giang Vien</a></li><li><a href="/giang-vien/kich-ban-ngay-1.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>Kich ban Ngay 1</a></li><li><a href="/giang-vien/kich-ban-ngay-2.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>Kich ban Ngay 2</a></li><li><a href="/giang-vien/plan.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg></span>Ke hoach tong the</a></li><li><a href="/giang-vien/checklist-to-chuc.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></span>Checklist to chuc</a></li></ul></div>
+        </nav>
+        <main class="content">
+            <button class="menu-toggle" onclick="toggleMenu()"><svg viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg> Menu</button>
+            <article>
+                <p>UBND QUẬN BẮC TỪ LIÊM</p>
+<p>BAN QUẢN LÝ DỰ ÁN ĐẦU TƯ XÂY DỰNG QUẬN</p>
+<p>CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</p>
+<p>Độc lập - Tự do - Hạnh phúc</p>
+
+<hr>
+
+<h1>BẢNG KHỐI LƯỢNG VÀ DỰ TOÁN KHẢO SÁT XÂY DỰNG</h1>
+
+<p><strong>Dự án</strong>: Cải tạo nâng cấp Trụ sở UBND phường Đông Ngạc, quận Bắc Từ Liêm, Hà Nội</p>
+<p><strong>Giai đoạn</strong>: Chuẩn bị đầu tư – Phục vụ lập BCKTKT</p>
+<p><strong>Căn cứ lập</strong>:</p>
+<ul>
+<li>Thông tư 10/2021/TT-BXD – Định mức khảo sát xây dựng</li>
+<li>Quyết định 610/QĐ-BXD ngày 30/5/2024 – Suất vốn đầu tư và giá xây dựng</li>
+<li>Bảng giá sản phẩm đo đạc bản đồ ban hành kèm Thông tư 08/2018/TT-BTNMT</li>
+<li>Đơn giá khảo sát địa kỹ thuật – Trung tâm Phân tích thí nghiệm XD Hà Nội năm 2024</li>
+</ul>
+
+<p><strong>Người lập</strong>: KS. Lê Thị Hương – Phòng Kỹ thuật, Ban QLDA quận Bắc Từ Liêm</p>
+<p><strong>Ngày lập</strong>: 10/04/2025</p>
+
+<hr>
+
+<h2>PHẦN A: KHẢO SÁT ĐỊA HÌNH</h2>
+
+<h3>A1. Đo đạc địa hình tỷ lệ 1/500</h3>
+
+<div class="table-wrap"><table>
+<tr><th>STT</th><th>Hạng mục</th><th>Đơn vị</th><th>Khối lượng</th><th>Đơn giá (đồng)</th><th>Thành tiền (đồng)</th><th>Ghi chú</th></tr>
+<tr><td>A1.1</td><td>Lập lưới khống chế đo vẽ (đường chuyền cấp 1)</td><td>điểm</td><td>6</td><td>1.850.000</td><td>11.100.000</td><td>Lưới cục bộ toàn khu</td></tr>
+<tr><td>A1.2</td><td>Đo vẽ bình đồ địa hình tỷ lệ 1/500, khu vực đô thị mật độ cao</td><td>ha</td><td>0,15</td><td>68.000.000</td><td>10.200.000</td><td>~1.500 m² đo vẽ</td></tr>
+<tr><td>A1.3</td><td>Đo vẽ chi tiết tỷ lệ 1/200 khu vực tiếp giáp đường phố</td><td>ha</td><td>0,05</td><td>95.000.000</td><td>4.750.000</td><td>Mặt đường, vỉa hè phía trước</td></tr>
+<tr><td>A1.4</td><td>Đo vẽ hiện trạng công trình (bản vẽ đo vẽ 1/100)</td><td>m² sàn</td><td>800</td><td>18.000</td><td>14.400.000</td><td>Đo vẽ 3 tầng hiện hữu</td></tr>
+<tr><td>A1.5</td><td>Xây dựng mô hình địa hình số (DEM/DTM)</td><td>gói</td><td>1</td><td>5.500.000</td><td>5.500.000</td><td>Từ số liệu đo đạc</td></tr>
+<tr><td>A1.6</td><td>In ấn, trình bày bản đồ (A1, màu)</td><td>tờ</td><td>20</td><td>85.000</td><td>1.700.000</td><td>5 bộ × 4 tờ/bộ</td></tr>
+<tr><td><strong>Cộng A1</strong></td><td></td><td></td><td></td><td></td><td><strong>47.650.000</strong></td><td></td></tr>
+</table></div>
+
+<h3>A2. Xác định công trình ngầm hiện hữu</h3>
+
+<div class="table-wrap"><table>
+<tr><th>STT</th><th>Hạng mục</th><th>Đơn vị</th><th>Khối lượng</th><th>Đơn giá (đồng)</th><th>Thành tiền (đồng)</th><th>Ghi chú</th></tr>
+<tr><td>A2.1</td><td>Điều tra, khảo sát hạ tầng ngầm bằng phương pháp quan sát + hỏi đơn vị quản lý</td><td>gói</td><td>1</td><td>8.500.000</td><td>8.500.000</td><td>Điện, nước, viễn thông</td></tr>
+<tr><td>A2.2</td><td>Thể hiện hạ tầng ngầm hiện hữu lên bản vẽ tổng mặt bằng</td><td>gói</td><td>1</td><td>2.500.000</td><td>2.500.000</td><td></td></tr>
+<tr><td><strong>Cộng A2</strong></td><td></td><td></td><td></td><td></td><td><strong>11.000.000</strong></td><td></td></tr>
+</table></div>
+
+<p><strong>TỔNG PHẦN A (Địa hình): 58.650.000 đồng</strong></p>
+
+<hr>
+
+<h2>PHẦN B: KHẢO SÁT ĐỊA CHẤT CÔNG TRÌNH</h2>
+
+<h3>B1. Công tác khoan thăm dò địa chất</h3>
+
+<div class="table-wrap"><table>
+<tr><th>STT</th><th>Hạng mục</th><th>Đơn vị</th><th>Khối lượng</th><th>Đơn giá (đồng)</th><th>Thành tiền (đồng)</th><th>Ghi chú</th></tr>
+<tr><td>B1.1</td><td>Khoan thăm dò địa chất, đất loại II, độ sâu 0–5 m</td><td>m</td><td>20</td><td>285.000</td><td>5.700.000</td><td>4 hố × 5 m đầu</td></tr>
+<tr><td>B1.2</td><td>Khoan thăm dò địa chất, đất loại II, độ sâu 5–10 m</td><td>m</td><td>20</td><td>320.000</td><td>6.400.000</td><td>4 hố × 5 m tiếp theo</td></tr>
+<tr><td>B1.3</td><td>Khoan thăm dò địa chất, đất loại III, độ sâu 10–15 m</td><td>m</td><td>20</td><td>380.000</td><td>7.600.000</td><td>4 hố × 5 m cuối</td></tr>
+<tr><td>B1.4</td><td>Ống chống vách PVC D90 mm</td><td>m</td><td>60</td><td>45.000</td><td>2.700.000</td><td>Chống sập vách</td></tr>
+<tr><td>B1.5</td><td>Di chuyển thiết bị khoan giữa các hố</td><td>lần</td><td>3</td><td>1.200.000</td><td>3.600.000</td><td>3 lần dịch chuyển (4 hố)</td></tr>
+<tr><td>B1.6</td><td>Lập trụ địa tầng hố khoan, nhật ký khoan</td><td>hố</td><td>4</td><td>1.500.000</td><td>6.000.000</td><td></td></tr>
+<tr><td><strong>Cộng B1</strong></td><td></td><td></td><td></td><td></td><td><strong>32.000.000</strong></td><td></td></tr>
+</table></div>
+
+<h3>B2. Thí nghiệm hiện trường</h3>
+
+<div class="table-wrap"><table>
+<tr><th>STT</th><th>Hạng mục</th><th>Đơn vị</th><th>Khối lượng</th><th>Đơn giá (đồng)</th><th>Thành tiền (đồng)</th><th>Ghi chú</th></tr>
+<tr><td>B2.1</td><td>Thí nghiệm xuyên tiêu chuẩn SPT (Standard Penetration Test)</td><td>lần</td><td>20</td><td>185.000</td><td>3.700.000</td><td>5 lần/hố × 4 hố, cách 3 m</td></tr>
+<tr><td>B2.2</td><td>Đo mực nước ngầm tại thời điểm khoan</td><td>hố</td><td>4</td><td>250.000</td><td>1.000.000</td><td></td></tr>
+<tr><td>B2.3</td><td>Lắp đặt ống quan trắc mực nước ngầm (piezometer)</td><td>hố</td><td>2</td><td>1.800.000</td><td>3.600.000</td><td>Tại 2 hố tiêu biểu</td></tr>
+<tr><td>B2.4</td><td>Theo dõi mực nước ngầm định kỳ (7 ngày liên tiếp)</td><td>lần</td><td>7</td><td>350.000</td><td>2.450.000</td><td>Sau khi lắp đặt piezometer</td></tr>
+<tr><td><strong>Cộng B2</strong></td><td></td><td></td><td></td><td></td><td><strong>10.750.000</strong></td><td></td></tr>
+</table></div>
+
+<h3>B3. Lấy mẫu và thí nghiệm trong phòng</h3>
+
+<div class="table-wrap"><table>
+<tr><th>STT</th><th>Hạng mục</th><th>Đơn vị</th><th>Khối lượng</th><th>Đơn giá (đồng)</th><th>Thành tiền (đồng)</th><th>Ghi chú</th></tr>
+<tr><td>B3.1</td><td>Lấy mẫu đất nguyên dạng bằng ống mẫu thành mỏng (Shelby tube)</td><td>mẫu</td><td>20</td><td>185.000</td><td>3.700.000</td><td>5 mẫu/hố × 4 hố</td></tr>
+<tr><td>B3.2</td><td>Thí nghiệm thành phần hạt (phân tích cơ học)</td><td>mẫu</td><td>20</td><td>280.000</td><td>5.600.000</td><td></td></tr>
+<tr><td>B3.3</td><td>Thí nghiệm độ ẩm tự nhiên (W%)</td><td>mẫu</td><td>20</td><td>85.000</td><td>1.700.000</td><td></td></tr>
+<tr><td>B3.4</td><td>Thí nghiệm khối lượng thể tích tự nhiên (γ)</td><td>mẫu</td><td>20</td><td>95.000</td><td>1.900.000</td><td></td></tr>
+<tr><td>B3.5</td><td>Thí nghiệm giới hạn Atterberg (LL, PL, IP)</td><td>mẫu</td><td>20</td><td>180.000</td><td>3.600.000</td><td></td></tr>
+<tr><td>B3.6</td><td>Thí nghiệm nén cố kết (oedometer test)</td><td>mẫu</td><td>8</td><td>950.000</td><td>7.600.000</td><td>Mẫu đất yếu, dẻo mềm</td></tr>
+<tr><td>B3.7</td><td>Thí nghiệm cắt phẳng (shear box – xác định c, φ)</td><td>mẫu</td><td>12</td><td>750.000</td><td>9.000.000</td><td>3 mẫu/lớp đất chính × 4 lớp</td></tr>
+<tr><td>B3.8</td><td>Thí nghiệm nén 3 trục UU (Unconsolidated Undrained)</td><td>mẫu</td><td>4</td><td>2.200.000</td><td>8.800.000</td><td>Lớp đất sét yếu</td></tr>
+<tr><td>B3.9</td><td>Thí nghiệm xác định hệ số thấm (Permeability test)</td><td>mẫu</td><td>4</td><td>650.000</td><td>2.600.000</td><td></td></tr>
+<tr><td><strong>Cộng B3</strong></td><td></td><td></td><td></td><td></td><td><strong>44.500.000</strong></td><td></td></tr>
+</table></div>
+
+<h3>B4. Kiểm định chất lượng kết cấu bê tông hiện trạng</h3>
+
+<div class="table-wrap"><table>
+<tr><th>STT</th><th>Hạng mục</th><th>Đơn vị</th><th>Khối lượng</th><th>Đơn giá (đồng)</th><th>Thành tiền (đồng)</th><th>Ghi chú</th></tr>
+<tr><td>B4.1</td><td>Kiểm tra cường độ bê tông bằng súng bật nảy Schmidt</td><td>điểm</td><td>24</td><td>120.000</td><td>2.880.000</td><td>8 điểm/tầng × 3 tầng</td></tr>
+<tr><td>B4.2</td><td>Khoan lấy mẫu bê tông lõi (core drilling) D100 mm</td><td>mẫu</td><td>6</td><td>850.000</td><td>5.100.000</td><td>2 mẫu/tầng</td></tr>
+<tr><td>B4.3</td><td>Thí nghiệm nén mẫu bê tông lõi (xác định R28)</td><td>mẫu</td><td>6</td><td>380.000</td><td>2.280.000</td><td></td></tr>
+<tr><td>B4.4</td><td>Kiểm tra cốt thép bằng máy dò từ (covermeter)</td><td>điểm</td><td>30</td><td>95.000</td><td>2.850.000</td><td>Xác định chiều dày lớp bảo vệ</td></tr>
+<tr><td><strong>Cộng B4</strong></td><td></td><td></td><td></td><td></td><td><strong>13.110.000</strong></td><td></td></tr>
+</table></div>
+
+<p><strong>TỔNG PHẦN B (Địa chất + Kiểm định): 100.360.000 đồng</strong></p>
+
+<hr>
+
+<h2>PHẦN C: CHI PHÍ PHỤC VỤ, BÁO CÁO VÀ GIÁN TIẾP</h2>
+
+<div class="table-wrap"><table>
+<tr><th>STT</th><th>Hạng mục</th><th>Đơn vị</th><th>Khối lượng</th><th>Đơn giá (đồng)</th><th>Thành tiền (đồng)</th><th>Ghi chú</th></tr>
+<tr><td>C.1</td><td>Lập báo cáo kết quả khảo sát địa hình</td><td>gói</td><td>1</td><td>5.000.000</td><td>5.000.000</td><td>Có chữ ký, đóng dấu</td></tr>
+<tr><td>C.2</td><td>Lập báo cáo kết quả khảo sát địa chất công trình</td><td>gói</td><td>1</td><td>12.000.000</td><td>12.000.000</td><td>Bao gồm bình đồ bố trí HK, mặt cắt địa chất</td></tr>
+<tr><td>C.3</td><td>Vận chuyển máy móc, thiết bị (xe tải + máy khoan)</td><td>ngày</td><td>5</td><td>1.500.000</td><td>7.500.000</td><td></td></tr>
+<tr><td>C.4</td><td>Chi phí bảo hộ lao động, vật tư tiêu hao</td><td>gói</td><td>1</td><td>3.500.000</td><td>3.500.000</td><td></td></tr>
+<tr><td>C.5</td><td>In ấn, đóng quyển hồ sơ báo cáo (5 bộ)</td><td>bộ</td><td>5</td><td>450.000</td><td>2.250.000</td><td></td></tr>
+<tr><td><strong>Cộng C</strong></td><td></td><td></td><td></td><td></td><td><strong>30.250.000</strong></td><td></td></tr>
+</table></div>
+
+<p><strong>TỔNG PHẦN C: 30.250.000 đồng</strong></p>
+
+<hr>
+
+<h2>TỔNG HỢP DỰ TOÁN KHẢO SÁT</h2>
+
+<div class="table-wrap"><table>
+<tr><th>Phần</th><th>Nội dung</th><th>Thành tiền (đồng)</th></tr>
+<tr><td>A</td><td>Khảo sát địa hình (A1 + A2)</td><td>58.650.000</td></tr>
+<tr><td>B</td><td>Khảo sát địa chất + kiểm định (B1 + B2 + B3 + B4)</td><td>100.360.000</td></tr>
+<tr><td>C</td><td>Chi phí phục vụ, báo cáo, gián tiếp</td><td>30.250.000</td></tr>
+<tr><td></td><td><strong>Tổng trước thuế và dự phòng</strong></td><td><strong>189.260.000</strong></td></tr>
+<tr><td></td><td>Thuế GTGT (10%)</td><td>18.926.000</td></tr>
+<tr><td></td><td>Chi phí dự phòng (5%)</td><td>9.463.000</td></tr>
+<tr><td></td><td><strong>TỔNG CỘNG</strong></td><td><strong>217.649.000</strong></td></tr>
+</table></div>
+
+<p><em>(Làm tròn: <strong>218.000.000 đồng</strong> – Hai trăm mười tám triệu đồng)</em></p>
+
+<hr>
+
+<h2>GHI CHÚ ĐỐI CHIẾU VỚI DỰ TOÁN CBDA TỔNG THỂ</h2>
+
+<p>Trong Dự toán chi phí CBDA (file <code>du-toan-chi-phi-cbda.md</code>), các hạng mục khảo sát được ghi nhận gộp:</p>
+
+<div class="table-wrap"><table>
+<tr><th>Mục trong dự toán CBDA</th><th>Giá trị dự toán</th><th>Giá trị khối lượng chi tiết</th><th>Chênh lệch</th></tr>
+<tr><td>Mục 3 – TV khảo sát địa hình 1/500</td><td>57.000.000</td><td>58.650.000</td><td>+1.650.000</td></tr>
+<tr><td>Mục 4 – TV khảo sát địa chất</td><td>95.000.000</td><td>100.360.000</td><td>+5.360.000</td></tr>
+<tr><td>Mục 5 – TV giám sát khảo sát</td><td>18.500.000</td><td>— (hạng mục riêng)</td><td>—</td></tr>
+</table></div>
+
+<p><strong>Lý do chênh lệch</strong>:</p>
+<ul>
+<li>Bổ sung khối lượng kiểm định bê tông hiện trạng (Phần B4 – 13.110.000 đồng) phát sinh theo yêu cầu của Sở Xây dựng trong quá trình thẩm định;</li>
+<li>Điều chỉnh tăng khối lượng đo vẽ hiện trạng công trình (A1.4 – 14.400.000 đồng) theo yêu cầu bổ sung hồ sơ thẩm định;</li>
+<li>Chênh lệch còn lại nằm trong sai số ±10% của dự toán CBDA ở giai đoạn lập chủ trương.</li>
+</ul>
+
+<p><strong>Kết luận</strong>: Tổng chi phí khảo sát thực tế (~218 triệu) vẫn nằm trong phạm vi <strong>chi phí dự phòng</strong> của dự toán CBDA ban đầu (85,5 triệu đồng dự phòng cho toàn bộ CBDA), không cần điều chỉnh tổng mức dự toán CBDA.</p>
+
+<hr>
+
+<p><em>Người lập: KS. Lê Thị Hương – Phòng Kỹ thuật, Ban QLDA quận Bắc Từ Liêm</em></p>
+<p><em>Kiểm tra: KS. Phạm Văn Hùng – Trưởng phòng Kỹ thuật</em></p>
+<p><em>Ngày hoàn thiện: 10/04/2025</em></p>
+
+            </article>
+        </main>
+    </div>
+    <script>
+    function toggleMenu() {
+        document.getElementById('sidebar').classList.toggle('open');
+    }
+    </script>
+</body>
+</html>

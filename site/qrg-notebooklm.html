@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NotebookLM — QRG — Đào Tạo AI CPMI</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    
+    <div class="layout">
+        <nav class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h2>Dao Tao AI</h2>
+                <p class="subtitle">Google Gemini & NotebookLM</p>
+                <button class="menu-close" onclick="toggleMenu()">&times;</button>
+            </div>
+            <div class="nav-section"><h3>HOC VIEN</h3><ul><li><a href="/index.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span>Trang chu</a></li><li><a href="/agenda.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span>Lich trinh 2 ngay</a></li></ul></div><div class="nav-section"><h3>HUONG DAN NHANH</h3><ul><li><a href="/qrg-gemini.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M12 2L9 12l-7 3 7 3 3 10 3-10 7-3-7-3z"/></svg></span>Gemini Workspace</a></li><li><a href="/qrg-notebooklm.html" class="active"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>NotebookLM</a></li><li><a href="/prompts.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>Prompt Templates</a></li><li><a href="/checklist.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>Checklist Bao Mat</a></li></ul></div><div class="nav-section"><h3>TAI LIEU THUC HANH</h3><ul><li><a href="/tai-lieu/to-trinh.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>To trinh CTrDT</a></li><li><a href="/tai-lieu/bao-cao.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg></span>BC de xuat CTrDT</a></li><li><a href="/tai-lieu/du-toan.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><circle cx="8" cy="8" r="6"/><path d="M18.09 10.37A6 6 0 1 1 10.34 18"/><line x1="7" y1="6" x2="7.01" y2="6"/><line x1="16" y1="12" x2="16.01" y2="12"/></svg></span>Du toan CBDA</a></li><li><a href="/tai-lieu/ke-hoach-lcnt.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg></span>KH LCNT</a></li><li><a href="/tai-lieu/email.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>Email tham dinh</a></li><li><a href="/tai-lieu/y-kien.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></span>Y kien so nganh</a></li><li><a href="/tai-lieu/nhiem-vu-ks.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>Nhiem vu khao sat</a></li><li><a href="/tai-lieu/khoi-luong.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M21.71 5.29l-3-3a1 1 0 0 0-1.42 0l-14 14a1 1 0 0 0 0 1.42l3 3a1 1 0 0 0 1.42 0l14-14a1 1 0 0 0 0-1.42z"/><line x1="7" y1="13.5" x2="9.5" y2="11"/><line x1="10" y1="10.5" x2="12.5" y2="8"/><line x1="13" y1="7.5" x2="15.5" y2="5"/></svg></span>Khoi luong KS</a></li></ul></div><div class="nav-section"><h3>GIANG VIEN</h3><ul><li><a href="/giang-vien/index.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 3 3 6 3s6-1 6-3v-5"/></svg></span>Portal Giang Vien</a></li><li><a href="/giang-vien/kich-ban-ngay-1.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>Kich ban Ngay 1</a></li><li><a href="/giang-vien/kich-ban-ngay-2.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>Kich ban Ngay 2</a></li><li><a href="/giang-vien/plan.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg></span>Ke hoach tong the</a></li><li><a href="/giang-vien/checklist-to-chuc.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></span>Checklist to chuc</a></li></ul></div>
+        </nav>
+        <main class="content">
+            <button class="menu-toggle" onclick="toggleMenu()"><svg viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg> Menu</button>
+            <article>
+                <h1>NOTEBOOKLM — HƯỚNG DẪN NHANH</h1>
+
+<blockquote>
+<p>Quick Reference Guide | Chương trình đào tạo AI cho công ty thầu XD</p>
+<p>In A4, 2 mặt, laminate</p>
+</blockquote>
+
+<hr>
+
+<h2>MẶT TRƯỚC — TẠO & SỬ DỤNG NOTEBOOK</h2>
+
+<h3>Bước 1: Tạo Notebook mới</h3>
+<ul>
+<li>Mở <strong>notebooklm.google.com</strong></li>
+<li>Click <strong>[+ New notebook]</strong></li>
+<li>Đặt tên: VD "Pháp luật XD 2024-2026"</li>
+</ul>
+
+<h3>Bước 2: Upload nguồn tài liệu</h3>
+<p>Click <strong>[+ Add source]</strong> → chọn loại:</p>
+<ul>
+<li><strong>Google Drive</strong>: Docs, Slides, PDF trên Drive</li>
+<li><strong>Upload file</strong>: PDF từ máy tính</li>
+<li><strong>Website URL</strong>: link văn bản pháp luật online</li>
+<li><strong>Copy/paste text</strong>: dán trực tiếp nội dung</li>
+</ul>
+
+<blockquote>
+<p><strong>Giới hạn</strong>: Tối đa 50 nguồn/notebook, mỗi nguồn tối đa 500.000 từ</p>
+</blockquote>
+
+<h3>Bước 3: Hỏi đáp với tài liệu</h3>
+
+<p>Gõ câu hỏi vào <strong>chat box</strong> phía dưới → AI trả lời dựa trên nguồn đã upload</p>
+
+<h4>Câu hỏi mẫu cho CBDA</h4>
+
+<div class="table-wrap"><table>
+<tr><th>Mục đích</th><th>Câu hỏi</th></tr>
+<tr><td>Tra cứu thời hạn</td><td>"Thời gian thẩm định dự án nhóm B là bao lâu? Trích dẫn điều khoản."</td></tr>
+<tr><td>So sánh quy trình</td><td>"So sánh quy trình phê duyệt dự án nhóm A vs nhóm C: khác nhau ở điểm nào?"</td></tr>
+<tr><td>Tìm biểu mẫu</td><td>"Liệt kê TẤT CẢ biểu mẫu cần nộp trong giai đoạn CBDA, kèm số hiệu TT quy định."</td></tr>
+<tr><td>Tra thẩm quyền</td><td>"Ai có thẩm quyền quyết định chủ trương đầu tư dự án nhóm C? Căn cứ điều nào?"</td></tr>
+<tr><td>Tổng hợp quy trình</td><td>"Tóm tắt 5 bước quyết định chủ trương đầu tư theo NĐ 175."</td></tr>
+<tr><td>Checklist hồ sơ</td><td>"Thành phần hồ sơ trình thẩm định BCKTKT gồm những gì?"</td></tr>
+</table></div>
+
+<h3>🔍 Xác minh trích dẫn</h3>
+<ul>
+<li>AI trả lời kèm <strong>số trích dẫn</strong> [1], [2], [3]...</li>
+<li>Click vào số → nhảy đến <strong>đoạn gốc</strong> trong tài liệu nguồn</li>
+<li><strong>Luôn kiểm tra trích dẫn</strong> trước khi dùng cho văn bản chính thức</li>
+</ul>
+
+<h3>💡 Mẹo hỏi đáp</h3>
+<ul>
+<li>Hỏi <strong>cụ thể</strong>: "theo NĐ 175" thay vì "theo quy định"</li>
+<li>Yêu cầu <strong>trích dẫn</strong>: "Trích dẫn điều khoản cụ thể"</li>
+<li>Hỏi <strong>so sánh</strong>: "So sánh X vs Y" → AI lập bảng so sánh</li>
+<li>Hỏi <strong>liệt kê</strong>: "Liệt kê TẤT CẢ..." → AI liệt kê đầy đủ</li>
+</ul>
+
+<hr>
+
+<h2>MẶT SAU — AUDIO OVERVIEW & CHIA SẺ</h2>
+
+<h3>Tạo Audio Overview (Podcast AI)</h3>
+
+<ul>
+<li>Trong notebook → click <strong>[Audio Overview]</strong> ở phần Notebook guide</li>
+<li><em>(Tùy chọn)</em> Gõ hướng dẫn tập trung:</li>
+<pre><code class="language-">
+   "Tập trung vào quy trình thẩm định dự án,
+   thời gian và đơn vị thực hiện"
+</code></pre>
+<li>Click <strong>[Generate]</strong> → chờ 2-5 phút</li>
+<li><strong>Play</strong> → nghe podcast tóm tắt nội dung tài liệu</li>
+</ul>
+
+<h4>Tính năng Audio</h4>
+<ul>
+<li><strong>Interactive mode</strong>: Click "Join" để hỏi thêm trong khi nghe</li>
+<li><strong>Tùy chỉnh focus</strong>: chỉ tóm tắt phần bạn quan tâm</li>
+<li><strong>Hỗ trợ tiếng Việt</strong>: Audio Overview hỗ trợ 50+ ngôn ngữ</li>
+</ul>
+
+<h4>Ứng dụng Audio Overview</h4>
+<ul>
+<li>Tạo <strong>podcast đào tạo nội bộ</strong> cho nhân viên mới</li>
+<li>Tóm tắt <strong>nghị định mới</strong> dạng audio cho cán bộ nghe trên đường đi</li>
+<li>Review nhanh <strong>quy trình CBDA</strong> trước khi vào dự án mới</li>
+</ul>
+
+<hr>
+
+<h3>Chia sẻ Notebook</h3>
+
+<ul>
+<li>Click <strong>[Share]</strong> (góc trên phải)</li>
+<li>Nhập email đồng nghiệp</li>
+<li>Chọn quyền:</li>
+<li><strong>Viewer</strong>: chỉ xem + hỏi đáp</li>
+<li><strong>Editor</strong>: xem + chỉnh sửa + thêm nguồn</li>
+</ul>
+
+<h4>Ứng dụng chia sẻ</h4>
+<ul>
+<li><strong>Nhóm đấu thầu</strong>: cùng review hồ sơ mời thầu</li>
+<li><strong>Ban QLDA</strong>: chia sẻ notebook pháp luật cho cả team</li>
+<li><strong>Đào tạo</strong>: share notebook cho NV mới tự học</li>
+</ul>
+
+<hr>
+
+<h3>Tạo nội dung khác từ Notebook</h3>
+
+<p>Trong phần <strong>Notebook guide</strong>, chọn:</p>
+
+<div class="table-wrap"><table>
+<tr><th>Nút</th><th>Tạo ra</th><th>Dùng cho</th></tr>
+<tr><td><strong>Study guide</strong></td><td>Tóm tắt cấu trúc tài liệu</td><td>Ôn lại quy trình nhanh</td></tr>
+<tr><td><strong>FAQ</strong></td><td>Câu hỏi thường gặp từ tài liệu</td><td>Đào tạo NV mới</td></tr>
+<tr><td><strong>Timeline</strong></td><td>Sự kiện theo thời gian</td><td>Theo dõi lộ trình dự án</td></tr>
+<tr><td><strong>Briefing doc</strong></td><td>Bản tóm tắt 1 trang</td><td>Báo cáo lãnh đạo</td></tr>
+</table></div>
+
+<hr>
+
+<h3>⚠️ LƯU Ý QUAN TRỌNG</h3>
+
+<div class="table-wrap"><table>
+<tr><th>✅ Đúng</th><th>❌ Sai</th></tr>
+<tr><td>NotebookLM CHỈ trả lời từ nguồn bạn upload</td><td>AI tự bịa thông tin từ internet</td></tr>
+<tr><td>Trích dẫn có thể click để xác minh</td><td>Tin output mà không kiểm tra nguồn</td></tr>
+<tr><td>Dùng cho VB pháp luật công khai</td><td>Upload hợp đồng bảo mật</td></tr>
+<tr><td>Upload càng nhiều VB liên quan → trả lời càng đầy đủ</td><td>Upload ít nguồn → trả lời thiếu</td></tr>
+</table></div>
+
+<hr>
+
+<h3>📋 WORKFLOW MẪU: Tra cứu pháp lý CBDA</h3>
+
+<pre><code class="language-">
+1. Tạo notebook "CBDA - Dự án [tên]"
+2. Upload: NĐ 175, Luật ĐTC 58, NĐ 85, NĐ 10, TT 79
+3. Hỏi: "Liệt kê các bước CBDA theo NĐ 175"
+4. Hỏi chi tiết: "Bước 2 cần hồ sơ gì? Thời hạn?"
+5. Copy kết quả → paste vào Gemini Docs để soạn tờ trình
+6. Tạo Audio Overview → chia sẻ cho team
+</code></pre>
+
+<p><strong>NotebookLM = Chuyên gia pháp lý riêng | Luôn trích dẫn nguồn</strong></p>
+
+            </article>
+        </main>
+    </div>
+    <script>
+    function toggleMenu() {
+        document.getElementById('sidebar').classList.toggle('open');
+    }
+    </script>
+</body>
+</html>

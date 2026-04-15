@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist Tổ Chức — Đào Tạo AI CPMI</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    
+    <script>
+    (function() {
+        var stored = sessionStorage.getItem('gv_auth');
+        if (stored !== 'ok') {
+            var pw = prompt('Nhập mật khẩu giảng viên:');
+            if (pw !== 'gvcpmi2026') {
+                document.body.innerHTML = '<div style="text-align:center;padding:100px"><h1>Sai mật khẩu</h1><p>Vui lòng liên hệ ban tổ chức.</p><a href="/">← Về trang chủ</a></div>';
+                return;
+            }
+            sessionStorage.setItem('gv_auth', 'ok');
+        }
+    })();
+    </script>
+    <div class="layout">
+        <nav class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h2>Dao Tao AI</h2>
+                <p class="subtitle">Google Gemini & NotebookLM</p>
+                <button class="menu-close" onclick="toggleMenu()">&times;</button>
+            </div>
+            <div class="nav-section"><h3>HOC VIEN</h3><ul><li><a href="/index.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span>Trang chu</a></li><li><a href="/agenda.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span>Lich trinh 2 ngay</a></li></ul></div><div class="nav-section"><h3>HUONG DAN NHANH</h3><ul><li><a href="/qrg-gemini.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M12 2L9 12l-7 3 7 3 3 10 3-10 7-3-7-3z"/></svg></span>Gemini Workspace</a></li><li><a href="/qrg-notebooklm.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>NotebookLM</a></li><li><a href="/prompts.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>Prompt Templates</a></li><li><a href="/checklist.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>Checklist Bao Mat</a></li></ul></div><div class="nav-section"><h3>TAI LIEU THUC HANH</h3><ul><li><a href="/tai-lieu/to-trinh.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>To trinh CTrDT</a></li><li><a href="/tai-lieu/bao-cao.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg></span>BC de xuat CTrDT</a></li><li><a href="/tai-lieu/du-toan.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><circle cx="8" cy="8" r="6"/><path d="M18.09 10.37A6 6 0 1 1 10.34 18"/><line x1="7" y1="6" x2="7.01" y2="6"/><line x1="16" y1="12" x2="16.01" y2="12"/></svg></span>Du toan CBDA</a></li><li><a href="/tai-lieu/ke-hoach-lcnt.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg></span>KH LCNT</a></li><li><a href="/tai-lieu/email.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>Email tham dinh</a></li><li><a href="/tai-lieu/y-kien.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></span>Y kien so nganh</a></li><li><a href="/tai-lieu/nhiem-vu-ks.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>Nhiem vu khao sat</a></li><li><a href="/tai-lieu/khoi-luong.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M21.71 5.29l-3-3a1 1 0 0 0-1.42 0l-14 14a1 1 0 0 0 0 1.42l3 3a1 1 0 0 0 1.42 0l14-14a1 1 0 0 0 0-1.42z"/><line x1="7" y1="13.5" x2="9.5" y2="11"/><line x1="10" y1="10.5" x2="12.5" y2="8"/><line x1="13" y1="7.5" x2="15.5" y2="5"/></svg></span>Khoi luong KS</a></li></ul></div><div class="nav-section"><h3>GIANG VIEN</h3><ul><li><a href="/giang-vien/index.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 3 3 6 3s6-1 6-3v-5"/></svg></span>Portal Giang Vien</a></li><li><a href="/giang-vien/kich-ban-ngay-1.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>Kich ban Ngay 1</a></li><li><a href="/giang-vien/kich-ban-ngay-2.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>Kich ban Ngay 2</a></li><li><a href="/giang-vien/plan.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg></span>Ke hoach tong the</a></li><li><a href="/giang-vien/checklist-to-chuc.html" class="active"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></span>Checklist to chuc</a></li></ul></div>
+        </nav>
+        <main class="content">
+            <button class="menu-toggle" onclick="toggleMenu()"><svg viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg> Menu</button>
+            <article>
+                <h1>Phase 7: Checklist Tổ Chức & Logistics (Rút Gọn)</h1>
+
+<p><strong>Priority</strong>: P0</p>
+<p><strong>Status</strong>: pending</p>
+<p><strong>Effort</strong>: 1-2 ngày</p>
+<p><strong>Deadline</strong>: T-1</p>
+
+<h2>Overview</h2>
+<p>Master checklist cho 2 buổi chiều (13:30–16:30). Nhẹ hơn bản gốc: không cần bữa trưa, chỉ 1 teabreak/ngày.</p>
+
+<hr>
+
+<h2>T-14 (2 tuần trước)</h2>
+
+<h3>Nhân sự</h3>
+<ul>
+<li class="task"><input type="checkbox" disabled> Xác nhận giảng viên chính (1 người)</li>
+<li class="task"><input type="checkbox" disabled> Xác nhận trợ giảng (1-2 người, giảm từ 2-3)</li>
+<li class="task"><input type="checkbox" disabled> Briefing trợ giảng: phát kịch bản rút gọn</li>
+<li class="task"><input type="checkbox" disabled> Xác nhận danh sách HV (tên, phòng ban, email)</li>
+</ul>
+
+<h3>Truyền thông</h3>
+<ul>
+<li class="task"><input type="checkbox" disabled> Email thông báo: ngày, giờ (13:30–16:30), mang laptop + sạc, đăng nhập Google trước</li>
+<li class="task"><input type="checkbox" disabled> Google Forms xác nhận tham dự</li>
+</ul>
+
+<h3>Bắt đầu Phase 1 + 2</h3>
+
+<hr>
+
+<h2>T-7 (1 tuần trước)</h2>
+
+<ul>
+<li class="task"><input type="checkbox" disabled> Phase 1 hoàn thành (8 PDF + 8 file giả lập trên Drive)</li>
+<li class="task"><input type="checkbox" disabled> Phase 2 hoàn thành (TK Google + Gemini enabled)</li>
+<li class="task"><input type="checkbox" disabled> Đặt phòng (sức chứa ≥ 50, ổ cắm điện)</li>
+<li class="task"><input type="checkbox" disabled> Test WiFi với 20+ devices</li>
+<li class="task"><input type="checkbox" disabled> Test projector + loa (play Audio Overview)</li>
+<li class="task"><input type="checkbox" disabled> Chuẩn bị 2 USB 4G hotspot backup</li>
+</ul>
+
+<hr>
+
+<h2>T-3 (3 ngày trước)</h2>
+
+<h3>Tài liệu hoàn thiện</h3>
+<ul>
+<li class="task"><input type="checkbox" disabled> Phase 3: 8 bộ slides sẵn sàng</li>
+<li class="task"><input type="checkbox" disabled> Phase 4: QRG + prompt templates + checklist BM</li>
+<li class="task"><input type="checkbox" disabled> Phase 5-6: kịch bản Ngày 1 + Ngày 2</li>
+</ul>
+
+<h3>In ấn</h3>
+<ul>
+<li class="task"><input type="checkbox" disabled> 50x QRG Gemini (A4, 2 mặt, laminate)</li>
+<li class="task"><input type="checkbox" disabled> 50x QRG NotebookLM (A4, 2 mặt, laminate)</li>
+<li class="task"><input type="checkbox" disabled> 50x Prompt templates (2 trang A4)</li>
+<li class="task"><input type="checkbox" disabled> 50x Checklist bảo mật (1 trang A4)</li>
+<li class="task"><input type="checkbox" disabled> 50x Template KH 30 ngày (1 trang A4)</li>
+<li class="task"><input type="checkbox" disabled> 4x Bảng nhiệm vụ Lab PB (A4)</li>
+<li class="task"><input type="checkbox" disabled> 10x Kịch bản dự án Lab CBDA E2E (A4)</li>
+<li class="task"><input type="checkbox" disabled> 4x Bảng tên nhóm (A3)</li>
+<li class="task"><input type="checkbox" disabled> 50x Chứng nhận hoàn thành</li>
+</ul>
+
+<h3>Digital</h3>
+<ul>
+<li class="task"><input type="checkbox" disabled> Google Forms khảo sát (10 câu) → QR code</li>
+<li class="task"><input type="checkbox" disabled> Nhóm Google Chat/Zalo → QR code</li>
+<li class="task"><input type="checkbox" disabled> Slides upload Drive, sẵn sàng trình chiếu</li>
+</ul>
+
+<h3>Email nhắc HV (T-3)</h3>
+<ul>
+<li class="task"><input type="checkbox" disabled> Nhắc laptop + sạc + đăng nhập Google</li>
+<li class="task"><input type="checkbox" disabled> Kèm agenda 2 ngày</li>
+</ul>
+
+<hr>
+
+<h2>T-1 (ngày trước)</h2>
+
+<h3>Dry run (~1h)</h3>
+<ul>
+<li class="task"><input type="checkbox" disabled> GV chạy thử demo Phiên 1 (15')</li>
+<li class="task"><input type="checkbox" disabled> Test link Drive, Slides, NotebookLM</li>
+<li class="task"><input type="checkbox" disabled> Test WiFi + projector + loa</li>
+<li class="task"><input type="checkbox" disabled> Video backup demo sẵn sàng</li>
+</ul>
+
+<h3>Phòng</h3>
+<ul>
+<li class="task"><input type="checkbox" disabled> Bàn ghế OK, layout 4 khu vực cho nhóm Ngày 2</li>
+<li class="task"><input type="checkbox" disabled> Tài liệu in đặt trên mỗi bàn</li>
+<li class="task"><input type="checkbox" disabled> Dán bảng tên 4 nhóm (dùng Ngày 2)</li>
+<li class="task"><input type="checkbox" disabled> Ổ cắm, đèn, điều hòa OK</li>
+</ul>
+
+<h3>Hậu cần</h3>
+<ul>
+<li class="task"><input type="checkbox" disabled> Nước uống, trà/café cho teabreak (14:35 + 14:20)</li>
+<li class="task"><input type="checkbox" disabled> Bút viết, giấy note mỗi bàn</li>
+<li class="task"><input type="checkbox" disabled> 3-5 laptop dự phòng</li>
+</ul>
+
+<hr>
+
+<h2>Ngày D (Ngày đào tạo)</h2>
+
+<h3>Trước buổi (12:30–13:30)</h3>
+<ul>
+<li class="task"><input type="checkbox" disabled> GV + trợ giảng có mặt 13:00</li>
+<li class="task"><input type="checkbox" disabled> Bật projector, mở slides, test loa</li>
+<li class="task"><input type="checkbox" disabled> Mở NLM + Gemini sẵn sàng demo</li>
+<li class="task"><input type="checkbox" disabled> WiFi hoạt động, Drive truy cập OK</li>
+</ul>
+
+<h3>Trong buổi</h3>
+<ul>
+<li class="task"><input type="checkbox" disabled> Trợ giảng ghi nhận HV gặp khó → hỗ trợ</li>
+<li class="task"><input type="checkbox" disabled> Chụp ảnh (marketing nội bộ)</li>
+<li class="task"><input type="checkbox" disabled> GV giữ đúng timeline (± 3 phút)</li>
+<li class="task"><input type="checkbox" disabled> Teabreak đúng giờ</li>
+</ul>
+
+<h3>Cuối buổi</h3>
+<ul>
+<li class="task"><input type="checkbox" disabled> Ngày 1: nhắc bài tập về nhà</li>
+<li class="task"><input type="checkbox" disabled> Ngày 2: phát chứng nhận, chụp ảnh tập thể</li>
+</ul>
+
+<hr>
+
+<h2>Ngân sách ước tính</h2>
+
+<div class="table-wrap"><table>
+<tr><th>Hạng mục</th><th>SL</th><th>Thành tiền</th></tr>
+<tr><td>In ấn tài liệu</td><td>300 tờ</td><td>1.500.000đ</td></tr>
+<tr><td>Laminate QRG</td><td>100 tờ</td><td>300.000đ</td></tr>
+<tr><td>Chứng nhận</td><td>50 bản</td><td>500.000đ</td></tr>
+<tr><td>Teabreak (2 lần)</td><td>50 người</td><td>3.000.000đ</td></tr>
+<tr><td>USB 4G backup</td><td>2 cái</td><td>400.000đ</td></tr>
+<tr><td><strong>Tổng</strong></td><td></td><td><strong>~5.700.000đ</strong></td></tr>
+</table></div>
+
+<p><em>Giảm ~37% so với bản gốc (9tr → 5.7tr). Không cần bữa trưa, ít teabreak hơn.</em></p>
+
+<hr>
+
+<h2>Phân công</h2>
+
+<div class="table-wrap"><table>
+<tr><th>Vai trò</th><th>Trách nhiệm</th></tr>
+<tr><td>Giảng viên chính</td><td>Demo, giảng, điều phối</td></tr>
+<tr><td>Trợ giảng 1</td><td>Hỗ trợ 2 nhóm, troubleshoot kỹ thuật</td></tr>
+<tr><td>Trợ giảng 2</td><td>Hỗ trợ 2 nhóm, chụp ảnh, logistics</td></tr>
+<tr><td>IT support</td><td>WiFi, projector, tài khoản</td></tr>
+<tr><td>Admin</td><td>In ấn, teabreak, phòng, chứng nhận</td></tr>
+</table></div>
+
+<h2>Success Criteria</h2>
+<ul>
+<li>100% checklist T-1 hoàn thành</li>
+<li>Dry run không lỗi kỹ thuật</li>
+<li>Tài liệu đầy đủ trên bàn trước 13:30</li>
+</ul>
+
+            </article>
+        </main>
+    </div>
+    <script>
+    function toggleMenu() {
+        document.getElementById('sidebar').classList.toggle('open');
+    }
+    </script>
+</body>
+</html>

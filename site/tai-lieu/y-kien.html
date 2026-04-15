@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tổng Hợp Ý Kiến Sở Ngành — Đào Tạo AI CPMI</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    
+    <div class="layout">
+        <nav class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h2>Dao Tao AI</h2>
+                <p class="subtitle">Google Gemini & NotebookLM</p>
+                <button class="menu-close" onclick="toggleMenu()">&times;</button>
+            </div>
+            <div class="nav-section"><h3>HOC VIEN</h3><ul><li><a href="/index.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span>Trang chu</a></li><li><a href="/agenda.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span>Lich trinh 2 ngay</a></li></ul></div><div class="nav-section"><h3>HUONG DAN NHANH</h3><ul><li><a href="/qrg-gemini.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M12 2L9 12l-7 3 7 3 3 10 3-10 7-3-7-3z"/></svg></span>Gemini Workspace</a></li><li><a href="/qrg-notebooklm.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>NotebookLM</a></li><li><a href="/prompts.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>Prompt Templates</a></li><li><a href="/checklist.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>Checklist Bao Mat</a></li></ul></div><div class="nav-section"><h3>TAI LIEU THUC HANH</h3><ul><li><a href="/tai-lieu/to-trinh.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>To trinh CTrDT</a></li><li><a href="/tai-lieu/bao-cao.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg></span>BC de xuat CTrDT</a></li><li><a href="/tai-lieu/du-toan.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><circle cx="8" cy="8" r="6"/><path d="M18.09 10.37A6 6 0 1 1 10.34 18"/><line x1="7" y1="6" x2="7.01" y2="6"/><line x1="16" y1="12" x2="16.01" y2="12"/></svg></span>Du toan CBDA</a></li><li><a href="/tai-lieu/ke-hoach-lcnt.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg></span>KH LCNT</a></li><li><a href="/tai-lieu/email.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>Email tham dinh</a></li><li><a href="/tai-lieu/y-kien.html" class="active"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></span>Y kien so nganh</a></li><li><a href="/tai-lieu/nhiem-vu-ks.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>Nhiem vu khao sat</a></li><li><a href="/tai-lieu/khoi-luong.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M21.71 5.29l-3-3a1 1 0 0 0-1.42 0l-14 14a1 1 0 0 0 0 1.42l3 3a1 1 0 0 0 1.42 0l14-14a1 1 0 0 0 0-1.42z"/><line x1="7" y1="13.5" x2="9.5" y2="11"/><line x1="10" y1="10.5" x2="12.5" y2="8"/><line x1="13" y1="7.5" x2="15.5" y2="5"/></svg></span>Khoi luong KS</a></li></ul></div><div class="nav-section"><h3>GIANG VIEN</h3><ul><li><a href="/giang-vien/index.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 3 3 6 3s6-1 6-3v-5"/></svg></span>Portal Giang Vien</a></li><li><a href="/giang-vien/kich-ban-ngay-1.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>Kich ban Ngay 1</a></li><li><a href="/giang-vien/kich-ban-ngay-2.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>Kich ban Ngay 2</a></li><li><a href="/giang-vien/plan.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg></span>Ke hoach tong the</a></li><li><a href="/giang-vien/checklist-to-chuc.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></span>Checklist to chuc</a></li></ul></div>
+        </nav>
+        <main class="content">
+            <button class="menu-toggle" onclick="toggleMenu()"><svg viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg> Menu</button>
+            <article>
+                <p>UBND QUẬN BẮC TỪ LIÊM</p>
+<p>BAN QUẢN LÝ DỰ ÁN ĐẦU TƯ XÂY DỰNG QUẬN</p>
+<p>CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</p>
+<p>Độc lập - Tự do - Hạnh phúc</p>
+
+<hr>
+
+<h1>BẢNG TỔNG HỢP Ý KIẾN GÓP Ý CỦA CÁC SỞ, NGÀNH</h1>
+<h2>Giai đoạn thẩm định Báo cáo kinh tế kỹ thuật</h2>
+
+<p><strong>Dự án</strong>: Cải tạo nâng cấp Trụ sở UBND phường Đông Ngạc, quận Bắc Từ Liêm, Hà Nội</p>
+<p><strong>Cuộc họp thẩm định</strong>: Ngày 06/08/2025 tại Sở Xây dựng Hà Nội</p>
+<p><strong>Chủ trì thẩm định</strong>: Sở Xây dựng Hà Nội (cơ quan thẩm định chính)</p>
+<p><strong>Người lập bảng tổng hợp</strong>: KS. Lê Thị Hương – Ban QLDA quận Bắc Từ Liêm</p>
+<p><strong>Ngày lập</strong>: 08/08/2025</p>
+
+<hr>
+
+<h2>BẢNG TỔNG HỢP Ý KIẾN</h2>
+
+<div class="table-wrap"><table>
+<tr><th>STT</th><th>Đơn vị góp ý</th><th>Nội dung ý kiến</th><th>Tiếp thu / Giải trình</th><th>Ghi chú</th></tr>
+<tr><td><strong>I</strong></td><td><strong>Sở Xây dựng Hà Nội</strong></td><td></td><td></td><td><em>Cơ quan chủ trì thẩm định</em></td></tr>
+<tr><td>I.1</td><td>Sở Xây dựng HN</td><td>Thiết kế PCCC chưa thể hiện tuyến thoát nạn thứ hai từ tầng 2, tầng 3 khi thang bộ chính bị khói lửa chặn. Yêu cầu bổ sung lối thoát nạn bổ sung theo QCVN 06:2022/BXD Mục 4.3.</td><td><strong>Tiếp thu toàn bộ.</strong> Bổ sung lối thoát nạn qua ban công phía sau tầng 2, 3; lắp thang thoát hiểm ngoài nhà bằng thép không gỉ, tải trọng thiết kế 150 kg/bậc. Bản vẽ PCCC đã cập nhật phiên bản v2 ngày 12/08/2025.</td><td>Bắt buộc chỉnh sửa trước phê duyệt</td></tr>
+<tr><td>I.2</td><td>Sở Xây dựng HN</td><td>Dự toán hạng mục thang máy chưa bao gồm chi phí hố thang (đào đất, gia cố đáy móng, chống thấm hố thang). Đề nghị bổ sung vào dự toán phần kết cấu.</td><td><strong>Tiếp thu.</strong> Bổ sung hạng mục hố thang máy: đào đất 18 m³, bê tông đáy + thành hố, chống thấm Sika. Giá trị bổ sung: 85.000.000 đồng. Dự toán đã cập nhật.</td><td>Bắt buộc chỉnh sửa</td></tr>
+<tr><td>I.3</td><td>Sở Xây dựng HN</td><td>Thuyết minh thiết kế chưa mô tả rõ loại thang máy (nhà sản xuất, tốc độ, tiêu chuẩn kỹ thuật áp dụng). Đề nghị bổ sung.</td><td><strong>Tiếp thu.</strong> Bổ sung thuyết minh: thang máy điện kéo cáp, tải 630 kg (8 người), tốc độ 1,0 m/s, cabin 1.100×1.400 mm, theo TCVN 6396-1:2010. Đơn vị thiết kế bổ sung vào Chương 5 Thuyết minh BCKTKT.</td><td>Bắt buộc chỉnh sửa</td></tr>
+<tr><td>I.4</td><td>Sở Xây dựng HN</td><td>Bản vẽ kiến trúc tầng 1 chưa thể hiện kích thước ô cửa khu vực bộ phận "một cửa" đảm bảo chiều rộng thông thủy ≥ 900 mm cho người khuyết tật theo QCVN 10:2022/BXD.</td><td><strong>Tiếp thu.</strong> Kiểm tra lại toàn bộ cửa đi khu vực tiếp công dân: cửa chính 1.200 mm, cửa phụ 900 mm; điều chỉnh bản vẽ kiến trúc tầng 1. Đã cập nhật bản vẽ.</td><td>Bắt buộc chỉnh sửa</td></tr>
+<tr><td>I.5</td><td>Sở Xây dựng HN</td><td>Trong quá trình thi công, yêu cầu lập và phê duyệt Phương án quan trắc lún công trình lân cận (nhà dân phía Nam, trường học phía Tây) theo TCVN 9360:2012 trước khi khởi công đào hố thang máy.</td><td><strong>Tiếp thu và ghi nhận.</strong> Sẽ đưa vào điều kiện hợp đồng thi công xây lắp. Nhà thầu xây lắp phải nộp Phương án quan trắc lún trước khi thi công đào hố thang máy.</td><td>Điều kiện trong HĐ thi công</td></tr>
+<tr><td><strong>II</strong></td><td><strong>Sở Quy hoạch – Kiến trúc Hà Nội</strong></td><td></td><td></td><td><em>Góp ý bằng văn bản số 1523/SQHKT-TTQHKT ngày 25/07/2025</em></td></tr>
+<tr><td>II.1</td><td>Sở QHKT HN</td><td>Chỉ giới đường đỏ đã được Sở cấp theo văn bản số 1218/SQHKT ngày 10/06/2025. Hồ sơ thiết kế đã thể hiện đúng chỉ giới. <strong>Không có ý kiến bổ sung về quy hoạch và kiến trúc.</strong></td><td>Không cần điều chỉnh.</td><td>Đã phù hợp quy hoạch</td></tr>
+<tr><td>II.2</td><td>Sở QHKT HN</td><td>Màu sắc mặt đứng công trình đề nghị sử dụng gam màu trung tính (trắng ngà, xám nhạt), không sử dụng màu sặc sỡ, đảm bảo phù hợp cảnh quan khu vực hành chính.</td><td><strong>Tiếp thu.</strong> Điều chỉnh vật liệu hoàn thiện mặt đứng: sơn nước màu trắng ngà (RAL 9001) kết hợp ốp đá granite xám nhạt. Cập nhật trong thuyết minh kiến trúc và bảng dự toán.</td><td>Tiếp thu, không bắt buộc chỉnh sửa bản vẽ</td></tr>
+<tr><td><strong>III</strong></td><td><strong>Sở Tài chính Hà Nội</strong></td><td></td><td></td><td><em>Góp ý bằng văn bản số 2134/STC-QLNS ngày 28/07/2025</em></td></tr>
+<tr><td>III.1</td><td>Sở Tài chính HN</td><td>Xác nhận dự án thuộc kế hoạch đầu tư công trung hạn 2021–2025 của quận Bắc Từ Liêm, đã được HĐND quận thông qua. Tổng mức đầu tư 15 tỷ đồng phù hợp với kế hoạch vốn đã phân bổ. <strong>Không có ý kiến về nguồn vốn và cơ cấu vốn.</strong></td><td>Không cần điều chỉnh.</td><td></td></tr>
+<tr><td>III.2</td><td>Sở Tài chính HN</td><td>Lưu ý: Đơn giá nhân công trong dự toán áp dụng Bảng lương vùng I (Hà Nội) theo Nghị định 74/2024/NĐ-CP. Đề nghị kiểm tra lại một số đơn giá nhân công trong chương hoàn thiện chưa cập nhật mức lương tối thiểu vùng mới.</td><td><strong>Tiếp thu.</strong> Đơn vị lập dự toán rà soát và điều chỉnh 7 mục đơn giá nhân công theo Nghị định 74/2024/NĐ-CP (mức lương tối thiểu vùng I = 4.960.000 đồng/tháng từ 01/07/2024). Tổng dự toán thay đổi không đáng kể (tăng ~12 triệu đồng).</td><td>Bắt buộc rà soát và cập nhật</td></tr>
+<tr><td>III.3</td><td>Sở Tài chính HN</td><td>Đề nghị bổ sung vào hồ sơ BCKTKT kế hoạch bảo trì công trình sau khi hoàn thành, dự kiến kinh phí bảo trì hàng năm để có cơ sở bố trí ngân sách thường xuyên.</td><td><strong>Tiếp thu một phần.</strong> Bổ sung mục Kế hoạch bảo trì vào Chương 8 Thuyết minh BCKTKT, nêu rõ định kỳ bảo trì và ước tính kinh phí bảo trì hàng năm (~150–200 triệu/năm).</td><td>Tiếp thu, bổ sung thuyết minh</td></tr>
+<tr><td><strong>IV</strong></td><td><strong>Sở Nông nghiệp & Môi trường Hà Nội</strong></td><td></td><td></td><td><em>Góp ý bằng văn bản số 891/SNN&MT-BVMT ngày 30/07/2025</em></td></tr>
+<tr><td>IV.1</td><td>Sở NN&MT HN</td><td>Cam kết BVMT đã được Sở xác nhận tại văn bản số 654/SNN&MT ngày 15/06/2025. Hồ sơ BCKTKT đã đính kèm. <strong>Không có ý kiến bổ sung về môi trường.</strong></td><td>Không cần điều chỉnh.</td><td></td></tr>
+<tr><td>IV.2</td><td>Sở NN&MT HN</td><td>Đề nghị hồ sơ thi công có phương án xử lý nước thải xây dựng, vệ sinh công trường và thu gom phế thải xây dựng. Không được đổ phế thải tự do ra vỉa hè, lòng đường, kênh thoát nước.</td><td><strong>Tiếp thu và ghi nhận.</strong> Sẽ đưa vào điều khoản hợp đồng thi công: nhà thầu phải có phương án vệ sinh môi trường công trường, hợp đồng với đơn vị thu gom phế thải có phép.</td><td>Điều kiện trong HĐ thi công</td></tr>
+<tr><td>IV.3</td><td>Sở NN&MT HN</td><td>Trong quá trình đập phá, cải tạo kết cấu bê tông cũ, nếu phát hiện vật liệu có khả năng chứa amiăng (tấm lợp Stone fibro-cement cũ), phải xử lý theo quy định về chất thải nguy hại.</td><td><strong>Ghi nhận.</strong> Đưa vào Biên bản bàn giao mặt bằng và lưu ý nhà thầu thi công kiểm tra.</td><td>Lưu ý trong hồ sơ thi công</td></tr>
+<tr><td><strong>V</strong></td><td><strong>Cảnh sát PCCC – Công an quận Bắc Từ Liêm</strong></td><td></td><td></td><td><em>Tham dự cuộc họp trực tiếp ngày 06/08/2025</em></td></tr>
+<tr><td>V.1</td><td>CA PCCC quận</td><td>Vị trí họng thu nước chữa cháy ngoài nhà tại góc phía Tây sân chưa phù hợp: cách lối vào xe chữa cháy 9m (vượt quy định 5m tại TCVN 7336:2021). Yêu cầu bố trí lại trong phạm vi 5m từ lối vào xe cứu hỏa.</td><td><strong>Tiếp thu toàn bộ.</strong> Dịch chuyển họng thu nước vào vị trí cạnh cổng chính, cách lối vào xe cứu hỏa 3,5m. Cập nhật bản vẽ tổng mặt bằng và bản vẽ PCCC phiên bản v2.</td><td>Bắt buộc chỉnh sửa trước phê duyệt</td></tr>
+<tr><td>V.2</td><td>CA PCCC quận</td><td>Hệ thống báo cháy tự động đề xuất dùng loại địa chỉ (addressable), phù hợp với quy mô công trình. Tuy nhiên, bản vẽ chưa thể hiện sơ đồ đi dây từ tủ trung tâm đến các đầu báo. Đề nghị bổ sung sơ đồ nguyên lý hệ thống báo cháy.</td><td><strong>Tiếp thu.</strong> Đơn vị thiết kế bổ sung bản vẽ sơ đồ nguyên lý hệ thống báo cháy tự động (addressable) và bảng thống kê thiết bị PCCC.</td><td>Bắt buộc bổ sung bản vẽ</td></tr>
+<tr><td>V.3</td><td>CA PCCC quận</td><td>Thống nhất với giải pháp thiết kế buồng thang bộ có áp suất dương (phòng thang bộ thoát nạn loại N2 theo QCVN 06:2022/BXD). Không có ý kiến khác về PCCC sau khi chỉnh sửa theo ý kiến V.1 và V.2.</td><td>Tiếp thu.</td><td>Đồng ý sau khi chỉnh sửa</td></tr>
+</table></div>
+
+<hr>
+
+<h2>TỔNG HỢP KẾT QUẢ</h2>
+
+<div class="table-wrap"><table>
+<tr><th>Loại ý kiến</th><th>Số lượng</th><th>Xử lý</th></tr>
+<tr><td>Bắt buộc chỉnh sửa bản vẽ / dự toán</td><td>7</td><td>Đã xử lý toàn bộ (xem email ngày 14/08/2025)</td></tr>
+<tr><td>Ghi nhận, đưa vào điều kiện hợp đồng thi công</td><td>3</td><td>Đã ghi nhận, sẽ thực hiện ở giai đoạn LCNT</td></tr>
+<tr><td>Không cần điều chỉnh (đã phù hợp)</td><td>4</td><td>—</td></tr>
+<tr><td><strong>Tổng</strong></td><td><strong>14</strong></td><td></td></tr>
+</table></div>
+
+<p><strong>Kết luận</strong>: Tất cả ý kiến bắt buộc chỉnh sửa đã được tiếp thu và xử lý. Hồ sơ BCKTKT đủ điều kiện trình phê duyệt theo kết luận của Sở Xây dựng tại Báo cáo thẩm định số 2847/BC-SXD-TĐ ngày 22/08/2025.</p>
+
+<hr>
+
+<p><em>Người lập bảng: KS. Lê Thị Hương – Phòng Kỹ thuật, Ban QLDA quận Bắc Từ Liêm</em></p>
+<p><em>Ngày hoàn thiện bảng tổng hợp: 23/08/2025</em></p>
+<p><em>Kiểm tra và xác nhận: Giám đốc Ban QLDA – Trần Minh Đức</em></p>
+
+            </article>
+        </main>
+    </div>
+    <script>
+    function toggleMenu() {
+        document.getElementById('sidebar').classList.toggle('open');
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhiệm Vụ Khảo Sát — Đào Tạo AI CPMI</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    
+    <div class="layout">
+        <nav class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h2>Dao Tao AI</h2>
+                <p class="subtitle">Google Gemini & NotebookLM</p>
+                <button class="menu-close" onclick="toggleMenu()">&times;</button>
+            </div>
+            <div class="nav-section"><h3>HOC VIEN</h3><ul><li><a href="/index.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span>Trang chu</a></li><li><a href="/agenda.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span>Lich trinh 2 ngay</a></li></ul></div><div class="nav-section"><h3>HUONG DAN NHANH</h3><ul><li><a href="/qrg-gemini.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M12 2L9 12l-7 3 7 3 3 10 3-10 7-3-7-3z"/></svg></span>Gemini Workspace</a></li><li><a href="/qrg-notebooklm.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>NotebookLM</a></li><li><a href="/prompts.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>Prompt Templates</a></li><li><a href="/checklist.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>Checklist Bao Mat</a></li></ul></div><div class="nav-section"><h3>TAI LIEU THUC HANH</h3><ul><li><a href="/tai-lieu/to-trinh.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>To trinh CTrDT</a></li><li><a href="/tai-lieu/bao-cao.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg></span>BC de xuat CTrDT</a></li><li><a href="/tai-lieu/du-toan.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><circle cx="8" cy="8" r="6"/><path d="M18.09 10.37A6 6 0 1 1 10.34 18"/><line x1="7" y1="6" x2="7.01" y2="6"/><line x1="16" y1="12" x2="16.01" y2="12"/></svg></span>Du toan CBDA</a></li><li><a href="/tai-lieu/ke-hoach-lcnt.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg></span>KH LCNT</a></li><li><a href="/tai-lieu/email.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>Email tham dinh</a></li><li><a href="/tai-lieu/y-kien.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></span>Y kien so nganh</a></li><li><a href="/tai-lieu/nhiem-vu-ks.html" class="active"><span class="nav-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>Nhiem vu khao sat</a></li><li><a href="/tai-lieu/khoi-luong.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M21.71 5.29l-3-3a1 1 0 0 0-1.42 0l-14 14a1 1 0 0 0 0 1.42l3 3a1 1 0 0 0 1.42 0l14-14a1 1 0 0 0 0-1.42z"/><line x1="7" y1="13.5" x2="9.5" y2="11"/><line x1="10" y1="10.5" x2="12.5" y2="8"/><line x1="13" y1="7.5" x2="15.5" y2="5"/></svg></span>Khoi luong KS</a></li></ul></div><div class="nav-section"><h3>GIANG VIEN</h3><ul><li><a href="/giang-vien/index.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 3 3 6 3s6-1 6-3v-5"/></svg></span>Portal Giang Vien</a></li><li><a href="/giang-vien/kich-ban-ngay-1.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>Kich ban Ngay 1</a></li><li><a href="/giang-vien/kich-ban-ngay-2.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>Kich ban Ngay 2</a></li><li><a href="/giang-vien/plan.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg></span>Ke hoach tong the</a></li><li><a href="/giang-vien/checklist-to-chuc.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></span>Checklist to chuc</a></li></ul></div>
+        </nav>
+        <main class="content">
+            <button class="menu-toggle" onclick="toggleMenu()"><svg viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg> Menu</button>
+            <article>
+                <p>UBND QUẬN BẮC TỪ LIÊM</p>
+<p>BAN QUẢN LÝ DỰ ÁN ĐẦU TƯ XÂY DỰNG QUẬN</p>
+<p>CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</p>
+<p>Độc lập - Tự do - Hạnh phúc</p>
+
+<p>Số: 09/NVKS-BQLDA                                  Hà Nội, ngày 08 tháng 04 năm 2025</p>
+
+<hr>
+
+<h1>NHIỆM VỤ KHẢO SÁT XÂY DỰNG</h1>
+<h2>Khảo sát địa hình tỷ lệ 1/500</h2>
+
+<p><strong>Dự án</strong>: Cải tạo nâng cấp Trụ sở UBND phường Đông Ngạc,</p>
+<p>quận Bắc Từ Liêm, thành phố Hà Nội</p>
+
+<hr>
+
+<h2>I. THÔNG TIN CHUNG</h2>
+
+<div class="table-wrap"><table>
+<tr><th>Thông tin</th><th>Nội dung</th></tr>
+<tr><td><strong>Tên công trình</strong></td><td>Cải tạo nâng cấp Trụ sở UBND phường Đông Ngạc, quận Bắc Từ Liêm, thành phố Hà Nội</td></tr>
+<tr><td><strong>Địa điểm xây dựng</strong></td><td>Số 1 phố Đông Ngạc, phường Đông Ngạc, quận Bắc Từ Liêm, Hà Nội</td></tr>
+<tr><td><strong>Chủ đầu tư</strong></td><td>UBND phường Đông Ngạc</td></tr>
+<tr><td><strong>Đại diện chủ đầu tư (BQLDA)</strong></td><td>Ban Quản lý dự án đầu tư xây dựng quận Bắc Từ Liêm</td></tr>
+<tr><td><strong>Loại hình khảo sát</strong></td><td>Khảo sát địa hình phục vụ lập Báo cáo kinh tế kỹ thuật</td></tr>
+<tr><td><strong>Giai đoạn thiết kế</strong></td><td>Thiết kế bản vẽ thi công (BVTC) kết hợp trong BCKTKT</td></tr>
+<tr><td><strong>Căn cứ lập nhiệm vụ KS</strong></td><td>TCVN 8478:2018 – Yêu cầu kỹ thuật đối với khảo sát địa hình</td></tr>
+<tr><td></td><td>Thông tư 10/2021/TT-BXD – Định mức khảo sát xây dựng</td></tr>
+<tr><td></td><td>Quyết định phê duyệt chủ trương đầu tư số 142/QĐ-UBND ngày 01/04/2025</td></tr>
+</table></div>
+
+<hr>
+
+<h2>II. MỤC ĐÍCH KHẢO SÁT</h2>
+
+<p>Khảo sát địa hình tỷ lệ 1/500 nhằm:</p>
+
+<ul>
+<li><strong>Lập bình đồ địa hình</strong> khu vực xây dựng và vùng lân cận, phản ánh trung thực hiện trạng địa hình, các công trình, hạ tầng kỹ thuật nổi trên mặt đất;</li>
+<li><strong>Đo vẽ hiện trạng công trình</strong> trụ sở hiện hữu (bình đồ, mặt đứng, mặt cắt) phục vụ thiết kế cải tạo;</li>
+<li><strong>Xác định chính xác</strong> ranh giới khuôn viên, vị trí công trình so với chỉ giới đường đỏ, chỉ giới xây dựng;</li>
+<li><strong>Cung cấp số liệu</strong> tọa độ, cao độ làm cơ sở thiết kế hệ thống thoát nước mặt, san nền sân đường trong khuôn viên;</li>
+<li><strong>Thể hiện hạ tầng kỹ thuật</strong> ngầm và nổi (điện, nước, viễn thông, thoát nước) hiện có trong và xung quanh khu vực.</li>
+</ul>
+
+<hr>
+
+<h2>III. PHẠM VI VÀ QUY MÔ KHẢO SÁT</h2>
+
+<h3>3.1. Phạm vi không gian</h3>
+
+<ul>
+<li><strong>Khu vực đo vẽ chính</strong>: Toàn bộ khuôn viên trụ sở UBND phường Đông Ngạc (~1.200 m²);</li>
+<li><strong>Khu vực mở rộng</strong>: Mở rộng ra xung quanh tối thiểu 10 m về các phía để thể hiện đường phố, vỉa hè, công trình tiếp giáp, đảm bảo kết nối hạ tầng;</li>
+<li><strong>Tổng diện tích đo vẽ</strong>: ~1.500 m² (kể cả vùng mở rộng);</li>
+<li><strong>Đo vẽ hiện trạng công trình</strong>: Toàn bộ mặt bằng 3 tầng, tỷ lệ 1/100.</li>
+</ul>
+
+<h3>3.2. Tỷ lệ bản đồ</h3>
+
+<div class="table-wrap"><table>
+<tr><th>Loại bản vẽ</th><th>Tỷ lệ</th><th>Khu vực áp dụng</th></tr>
+<tr><td>Bình đồ địa hình tổng thể</td><td>1/500</td><td>Toàn bộ khu vực khảo sát ~1.500 m²</td></tr>
+<tr><td>Bản vẽ chi tiết mặt bằng tiếp giáp</td><td>1/200</td><td>Lối vào, vỉa hè, sân trước ~300 m²</td></tr>
+<tr><td>Đo vẽ hiện trạng kiến trúc công trình</td><td>1/100</td><td>Mặt bằng từng tầng, mặt đứng 4 phía</td></tr>
+<tr><td>Mặt cắt dọc tuyến thoát nước</td><td>1/200</td><td>Tuyến thoát nước chính trong khuôn viên</td></tr>
+</table></div>
+
+<hr>
+
+<h2>IV. YÊU CẦU KỸ THUẬT</h2>
+
+<h3>4.1. Hệ tọa độ và cao độ</h3>
+
+<ul>
+<li><strong>Hệ tọa độ</strong>: Hệ tọa độ quốc gia VN-2000, kinh tuyến trục 105°, múi chiếu 3°;</li>
+<li><strong>Hệ cao độ</strong>: Hệ cao độ quốc gia Hòn Dấu (độ cao trung bình mực nước biển);</li>
+<li><strong>Điểm khống chế gốc</strong>: Sử dụng tối thiểu 02 điểm khống chế tọa độ nhà nước (GNSS hạng III hoặc cao hơn) và 01 điểm độ cao nhà nước (hạng III) trong khu vực quận Bắc Từ Liêm. Đơn vị khảo sát phải liên hệ với Sở TN&MT Hà Nội để được cung cấp tọa độ, cao độ điểm gốc trước khi đo.</li>
+</ul>
+
+<h3>4.2. Độ chính xác đo đạc</h3>
+
+<div class="table-wrap"><table>
+<tr><th>Chỉ tiêu</th><th>Yêu cầu</th></tr>
+<tr><td>Sai số vị trí điểm khống chế</td><td>≤ 0,10 m (so với điểm gốc nhà nước)</td></tr>
+<tr><td>Sai số vị trí điểm chi tiết (địa vật rõ nét)</td><td>≤ 0,50 m</td></tr>
+<tr><td>Sai số cao độ điểm chi tiết</td><td>≤ 0,10 m</td></tr>
+<tr><td>Khoảng cao đều đường bình độ</td><td>0,50 m</td></tr>
+<tr><td>Mật độ điểm đo (khu vực xây dựng)</td><td>≥ 1 điểm/20 m²</td></tr>
+</table></div>
+
+<h3>4.3. Nội dung thể hiện trên bản đồ</h3>
+
+<p>Bản đồ địa hình phải thể hiện đầy đủ các yếu tố sau:</p>
+
+<p><strong>a) Địa vật:</strong></p>
+<ul>
+<li>Ranh giới khuôn viên, tường rào, cổng;</li>
+<li>Tất cả công trình xây dựng hiện có (trụ sở, nhà kho, nhà xe, mái che);</li>
+<li>Cây xanh có đường kính gốc ≥ 20 cm (thể hiện vị trí và đường kính);</li>
+<li>Đường đi nội bộ, sân, vỉa hè, bậc thềm;</li>
+<li>Hố ga, nắp hố kỹ thuật, trụ điện, cột anten.</li>
+</ul>
+
+<p><strong>b) Đường giao thông và chỉ giới:</strong></p>
+<ul>
+<li>Tim đường, mép đường, vỉa hè phố Đông Ngạc;</li>
+<li>Chỉ giới đường đỏ theo văn bản cấp của Sở QHKT (số 1218/SQHKT ngày 10/06/2025);</li>
+<li>Chỉ giới xây dựng (nếu có quy định riêng).</li>
+</ul>
+
+<p><strong>c) Hạ tầng kỹ thuật:</strong></p>
+<ul>
+<li>Đường dây điện, trụ điện, tủ điện;</li>
+<li>Đường ống cấp nước (vị trí van, đồng hồ nước);</li>
+<li>Hố ga, cống thoát nước (thể hiện hướng thoát);</li>
+<li>Đường dây viễn thông, hộp cáp quang;</li>
+<li>Trạm biến áp, tủ cáp (nếu có trong khu vực).</li>
+</ul>
+
+<p><strong>d) Địa hình:</strong></p>
+<ul>
+<li>Đường bình độ cơ bản khoảng cao đều 0,50 m;</li>
+<li>Đường bình độ phụ 0,25 m tại khu vực địa hình bằng phẳng;</li>
+<li>Điểm cao độ đặc trưng (nền đường, sân, cổng, góc tường).</li>
+</ul>
+
+<p><strong>e) Đo vẽ hiện trạng kiến trúc (1/100):</strong></p>
+<ul>
+<li>Mặt bằng từng tầng: thể hiện tường, cột, cửa đi, cửa sổ, cầu thang, vệ sinh;</li>
+<li>Kích thước gian phòng, chiều dày tường, vị trí cột;</li>
+<li>Mặt đứng 4 phía: cửa, cửa sổ, ô văng, ban công, mái;</li>
+<li>Cao độ nền các tầng, chiều cao tầng, chiều cao tổng thể.</li>
+</ul>
+
+<h3>4.4. Thiết bị và phương pháp đo</h3>
+
+<ul>
+<li><strong>Thiết bị GPS/GNSS</strong>: Máy thu GPS 2 tần số (L1/L2) độ chính xác vị trí ≤ 5 mm + 1 ppm;</li>
+<li><strong>Máy toàn đạc điện tử (Total Station)</strong>: Độ chính xác góc ≤ 5", độ chính xác cạnh ≤ 3 mm + 2 ppm;</li>
+<li><strong>Máy thủy bình</strong>: Độ chính xác ≤ 1 mm/km;</li>
+<li><strong>Phương pháp đo</strong>: Kết hợp RTK-GNSS (mảng trống, đường phố) và máy toàn đạc (trong khuôn viên, khu vực khuất);</li>
+<li><strong>Phần mềm xử lý số liệu</strong>: AutoCAD Map 3D hoặc tương đương, xuất file .dwg và .pdf.</li>
+</ul>
+
+<hr>
+
+<h2>V. SẢN PHẨM GIAO NỘP</h2>
+
+<h3>5.1. Hồ sơ bản vẽ</h3>
+
+<div class="table-wrap"><table>
+<tr><th>STT</th><th>Tên sản phẩm</th><th>Tỷ lệ</th><th>Số lượng bản in</th><th>File số</th></tr>
+<tr><td>1</td><td>Bình đồ địa hình tổng thể khu vực</td><td>1/500</td><td>5 bộ (A1, màu)</td><td>.dwg + .pdf</td></tr>
+<tr><td>2</td><td>Bản vẽ chi tiết khu vực tiếp giáp</td><td>1/200</td><td>5 bộ (A1)</td><td>.dwg + .pdf</td></tr>
+<tr><td>3</td><td>Mặt bằng hiện trạng tầng 1</td><td>1/100</td><td>5 bộ (A1)</td><td>.dwg + .pdf</td></tr>
+<tr><td>4</td><td>Mặt bằng hiện trạng tầng 2</td><td>1/100</td><td>5 bộ (A1)</td><td>.dwg + .pdf</td></tr>
+<tr><td>5</td><td>Mặt bằng hiện trạng tầng 3 + mái</td><td>1/100</td><td>5 bộ (A1)</td><td>.dwg + .pdf</td></tr>
+<tr><td>6</td><td>Mặt đứng hiện trạng 4 phía</td><td>1/100</td><td>5 bộ (A1)</td><td>.dwg + .pdf</td></tr>
+<tr><td>7</td><td>Mặt cắt ngang, mặt cắt dọc đặc trưng</td><td>1/100</td><td>5 bộ (A1)</td><td>.dwg + .pdf</td></tr>
+<tr><td>8</td><td>Sơ đồ bố trí hạ tầng kỹ thuật hiện hữu</td><td>1/200</td><td>5 bộ (A3)</td><td>.dwg + .pdf</td></tr>
+</table></div>
+
+<h3>5.2. Hồ sơ số liệu và báo cáo</h3>
+
+<div class="table-wrap"><table>
+<tr><th>STT</th><th>Tên tài liệu</th><th>Định dạng</th><th>Ghi chú</th></tr>
+<tr><td>1</td><td>Báo cáo kết quả khảo sát địa hình</td><td>PDF + Word</td><td>Có chữ ký, đóng dấu</td></tr>
+<tr><td>2</td><td>File số liệu điểm đo gốc (raw data GPS)</td><td>.txt / .csv</td><td>Toàn bộ điểm đo</td></tr>
+<tr><td>3</td><td>File tọa độ điểm khống chế (tọa độ VN-2000)</td><td>Excel</td><td>Kèm lý lịch điểm</td></tr>
+<tr><td>4</td><td>Mô hình địa hình số (DEM)</td><td>.dem / .tif</td><td>Độ phân giải 0,5m</td></tr>
+<tr><td>5</td><td>File CAD tổng hợp toàn bộ khu vực</td><td>.dwg</td><td>Theo lớp (layer) chuẩn</td></tr>
+<tr><td>6</td><td>Biên bản nghiệm thu nội nghiệp</td><td>PDF</td><td>Ký xác nhận</td></tr>
+</table></div>
+
+<h3>5.3. Yêu cầu về file CAD</h3>
+
+<ul>
+<li>Cấu trúc layer theo tiêu chuẩn của Bộ Xây dựng (hoặc theo yêu cầu của đơn vị thiết kế);</li>
+<li>Đơn vị vẽ: milimét (mm); hệ tọa độ VN-2000 được nhúng vào file;</li>
+<li>Ghi chú, chú thích bằng font chữ .shx chuẩn Việt (hoặc font TTF, không bị lỗi font);</li>
+<li>File CAD phải mở được trực tiếp bằng AutoCAD 2019 trở lên, không dùng file nén (zip) khi giao nộp bản chính thức.</li>
+</ul>
+
+<hr>
+
+<h2>VI. THỜI GIAN THỰC HIỆN</h2>
+
+<div class="table-wrap"><table>
+<tr><th>Giai đoạn</th><th>Nội dung</th><th>Thời gian</th></tr>
+<tr><td>Khởi động</td><td>Tiếp nhận nhiệm vụ, liên hệ lấy tọa độ gốc, chuẩn bị thiết bị</td><td>Ngày 1–3 (10–12/04/2025)</td></tr>
+<tr><td>Đo đạc ngoại nghiệp</td><td>Đo lưới khống chế, đo chi tiết địa hình, đo vẽ hiện trạng</td><td>Ngày 4–10 (13–19/04/2025)</td></tr>
+<tr><td>Nội nghiệp</td><td>Xử lý số liệu, biên tập bản đồ, lập báo cáo</td><td>Ngày 11–17 (20–26/04/2025)</td></tr>
+<tr><td>Kiểm tra, hoàn thiện</td><td>Kiểm tra nội bộ, chỉnh sửa, in ấn, đóng quyển</td><td>Ngày 18–20 (27–29/04/2025)</td></tr>
+<tr><td>Giao nộp</td><td>Giao hồ sơ cho Ban QLDA, nghiệm thu</td><td>Ngày 21 (30/04/2025)</td></tr>
+</table></div>
+
+<p><strong>Tổng thời gian thực hiện</strong>: 21 ngày kể từ ngày ký hợp đồng</p>
+
+<p><em>Lưu ý</em>: Thời gian thực hiện có thể được điều chỉnh khi có sự kiện bất khả kháng (mưa lớn liên tục, không thể đo ngoài trời) nhưng phải thông báo ngay bằng văn bản cho Ban QLDA và không vượt quá 05 ngày gia hạn.</p>
+
+<hr>
+
+<h2>VII. YÊU CẦU VỀ TỔ CHỨC THỰC HIỆN</h2>
+
+<h3>7.1. Nhân sự tối thiểu</h3>
+
+<div class="table-wrap"><table>
+<tr><th>Vị trí</th><th>Yêu cầu</th><th>Số lượng</th></tr>
+<tr><td>Chủ nhiệm khảo sát</td><td>Kỹ sư trắc địa, kinh nghiệm ≥ 5 năm, có chứng chỉ hành nghề khảo sát XD hạng II</td><td>1 người</td></tr>
+<tr><td>Kỹ sư đo đạc ngoại nghiệp</td><td>Kỹ sư/kỹ thuật viên trắc địa, kinh nghiệm ≥ 2 năm</td><td>2 người</td></tr>
+<tr><td>Kỹ thuật viên nội nghiệp (CAD)</td><td>Thành thạo AutoCAD, biết xử lý số liệu GPS</td><td>1 người</td></tr>
+</table></div>
+
+<h3>7.2. Phối hợp trong quá trình khảo sát</h3>
+
+<ul>
+<li>Đơn vị khảo sát phải thông báo lịch đo đạc trước ít nhất 01 ngày để Ban QLDA bố trí cán bộ phối hợp và cán bộ phường mở cổng, hỗ trợ tiếp cận khuôn viên;</li>
+<li>Không được tự ý vào các phòng làm việc để đo đạc nếu chưa có sự cho phép của UBND phường;</li>
+<li>Trong quá trình đo, nếu phát hiện hạng mục kỹ thuật cần bổ sung (chưa nêu trong nhiệm vụ), phải báo cáo ngay với Ban QLDA để xem xét điều chỉnh.</li>
+</ul>
+
+<hr>
+
+<h2>VIII. NGHIỆM THU VÀ THANH TOÁN</h2>
+
+<ul>
+<li>Nghiệm thu theo giai đoạn: (1) Ngoại nghiệp – kiểm tra sơ bộ tại công trường; (2) Nội nghiệp – kiểm tra số liệu và bản vẽ trước khi in;</li>
+<li>Nghiệm thu cuối cùng: Sau khi giao nộp đủ hồ sơ và được Ban QLDA xác nhận;</li>
+<li>Thanh toán: 70% sau nghiệm thu nội nghiệp, 30% còn lại sau nghiệm thu cuối cùng.</li>
+</ul>
+
+<hr>
+
+<p><em>Nơi nhận:</em></p>
+<ul>
+<li>Đơn vị khảo sát (để thực hiện);</li>
+<li>Đơn vị tư vấn thiết kế (để biết, phối hợp);</li>
+<li>Lưu: VT, BQLDA.</li>
+</ul>
+
+<div class="table-wrap"><table>
+<tr><th></th><th><strong>GIÁM ĐỐC BAN QLDA</strong></th></tr>
+<tr><td></td><td><em>(đã ký)</em></td></tr>
+<tr><td></td><td><strong>Trần Minh Đức</strong></td></tr>
+</table></div>
+
+            </article>
+        </main>
+    </div>
+    <script>
+    function toggleMenu() {
+        document.getElementById('sidebar').classList.toggle('open');
+    }
+    </script>
+</body>
+</html>

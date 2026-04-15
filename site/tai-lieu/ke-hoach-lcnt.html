@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kế Hoạch LCNT — Đào Tạo AI CPMI</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    
+    <div class="layout">
+        <nav class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h2>Dao Tao AI</h2>
+                <p class="subtitle">Google Gemini & NotebookLM</p>
+                <button class="menu-close" onclick="toggleMenu()">&times;</button>
+            </div>
+            <div class="nav-section"><h3>HOC VIEN</h3><ul><li><a href="/index.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span>Trang chu</a></li><li><a href="/agenda.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span>Lich trinh 2 ngay</a></li></ul></div><div class="nav-section"><h3>HUONG DAN NHANH</h3><ul><li><a href="/qrg-gemini.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M12 2L9 12l-7 3 7 3 3 10 3-10 7-3-7-3z"/></svg></span>Gemini Workspace</a></li><li><a href="/qrg-notebooklm.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>NotebookLM</a></li><li><a href="/prompts.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>Prompt Templates</a></li><li><a href="/checklist.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>Checklist Bao Mat</a></li></ul></div><div class="nav-section"><h3>TAI LIEU THUC HANH</h3><ul><li><a href="/tai-lieu/to-trinh.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>To trinh CTrDT</a></li><li><a href="/tai-lieu/bao-cao.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg></span>BC de xuat CTrDT</a></li><li><a href="/tai-lieu/du-toan.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><circle cx="8" cy="8" r="6"/><path d="M18.09 10.37A6 6 0 1 1 10.34 18"/><line x1="7" y1="6" x2="7.01" y2="6"/><line x1="16" y1="12" x2="16.01" y2="12"/></svg></span>Du toan CBDA</a></li><li><a href="/tai-lieu/ke-hoach-lcnt.html" class="active"><span class="nav-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg></span>KH LCNT</a></li><li><a href="/tai-lieu/email.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>Email tham dinh</a></li><li><a href="/tai-lieu/y-kien.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></span>Y kien so nganh</a></li><li><a href="/tai-lieu/nhiem-vu-ks.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>Nhiem vu khao sat</a></li><li><a href="/tai-lieu/khoi-luong.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M21.71 5.29l-3-3a1 1 0 0 0-1.42 0l-14 14a1 1 0 0 0 0 1.42l3 3a1 1 0 0 0 1.42 0l14-14a1 1 0 0 0 0-1.42z"/><line x1="7" y1="13.5" x2="9.5" y2="11"/><line x1="10" y1="10.5" x2="12.5" y2="8"/><line x1="13" y1="7.5" x2="15.5" y2="5"/></svg></span>Khoi luong KS</a></li></ul></div><div class="nav-section"><h3>GIANG VIEN</h3><ul><li><a href="/giang-vien/index.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 3 3 6 3s6-1 6-3v-5"/></svg></span>Portal Giang Vien</a></li><li><a href="/giang-vien/kich-ban-ngay-1.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>Kich ban Ngay 1</a></li><li><a href="/giang-vien/kich-ban-ngay-2.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>Kich ban Ngay 2</a></li><li><a href="/giang-vien/plan.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg></span>Ke hoach tong the</a></li><li><a href="/giang-vien/checklist-to-chuc.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></span>Checklist to chuc</a></li></ul></div>
+        </nav>
+        <main class="content">
+            <button class="menu-toggle" onclick="toggleMenu()"><svg viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg> Menu</button>
+            <article>
+                <p>UBND QUẬN BẮC TỪ LIÊM</p>
+<p>BAN QUẢN LÝ DỰ ÁN ĐẦU TƯ XÂY DỰNG QUẬN</p>
+<p>CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</p>
+<p>Độc lập - Tự do - Hạnh phúc</p>
+
+<hr>
+
+<h1>KẾ HOẠCH LỰA CHỌN NHÀ THẦU</h1>
+<h2>Giai đoạn Chuẩn bị Đầu tư</h2>
+
+<p><strong>Dự án</strong>: Cải tạo nâng cấp Trụ sở UBND phường Đông Ngạc, quận Bắc Từ Liêm, Hà Nội</p>
+<p><strong>Chủ đầu tư</strong>: UBND phường Đông Ngạc</p>
+<p><strong>Bên mời thầu</strong>: Ban Quản lý dự án đầu tư xây dựng quận Bắc Từ Liêm</p>
+<p><strong>Tổng giá trị gói thầu CBDA</strong>: 940.500.000 đồng</p>
+<p><strong>Căn cứ lập</strong>: Mẫu 02A ban hành kèm theo Thông tư 07/2024/TT-BKHĐT (trước đây là TT79/2024); Luật Đấu thầu số 22/2023/QH15; Nghị định 24/2024/NĐ-CP</p>
+
+<hr>
+
+<h2>BẢNG KẾ HOẠCH LỰA CHỌN NHÀ THẦU – GIAI ĐOẠN CBDA</h2>
+
+<div class="table-wrap"><table>
+<tr><th>STT</th><th>Tên gói thầu</th><th>Giá gói thầu (đồng)</th><th>Nguồn vốn</th><th>Hình thức lựa chọn nhà thầu</th><th>Phương thức LCNT</th><th>Thời gian bắt đầu tổ chức LCNT</th><th>Loại hợp đồng</th><th>Thời gian thực hiện HĐ</th></tr>
+<tr><td>1</td><td>Tư vấn lập nhiệm vụ khảo sát xây dựng (địa hình + địa chất)</td><td>15.500.000</td><td>NS quận Bắc Từ Liêm</td><td>Chỉ định thầu rút gọn</td><td>Một giai đoạn, một túi hồ sơ</td><td>Tháng 4/2025</td><td>Hợp đồng trọn gói</td><td>10 ngày</td></tr>
+<tr><td>2</td><td>Tư vấn khảo sát địa hình tỷ lệ 1/500 và khảo sát địa chất công trình</td><td>170.500.000</td><td>NS quận Bắc Từ Liêm</td><td>Chỉ định thầu</td><td>Một giai đoạn, một túi hồ sơ</td><td>Tháng 4/2025</td><td>Hợp đồng trọn gói</td><td>30 ngày</td></tr>
+<tr><td>3</td><td>Tư vấn giám sát khảo sát xây dựng</td><td>18.500.000</td><td>NS quận Bắc Từ Liêm</td><td>Chỉ định thầu rút gọn</td><td>Một giai đoạn, một túi hồ sơ</td><td>Tháng 4/2025</td><td>Hợp đồng trọn gói</td><td>30 ngày (song song gói 2)</td></tr>
+<tr><td>4</td><td>Tư vấn xin cấp chỉ giới đường đỏ và số liệu hạ tầng kỹ thuật; tư vấn lập Cam kết bảo vệ môi trường</td><td>67.000.000</td><td>NS quận Bắc Từ Liêm</td><td>Chỉ định thầu</td><td>Một giai đoạn, một túi hồ sơ</td><td>Tháng 5/2025</td><td>Hợp đồng trọn gói</td><td>45 ngày</td></tr>
+<tr><td>5</td><td>Tư vấn lập Báo cáo kinh tế kỹ thuật (BCKTKT) và lập mô hình thông tin công trình (BIM Level 2)</td><td>500.000.000</td><td>NS quận Bắc Từ Liêm</td><td>Chỉ định thầu</td><td>Một giai đoạn, một túi hồ sơ</td><td>Tháng 5/2025</td><td>Hợp đồng theo tỷ lệ phần trăm</td><td>60 ngày</td></tr>
+<tr><td>6</td><td>Tư vấn thẩm tra thiết kế và dự toán BCKTKT</td><td>68.000.000</td><td>NS quận Bắc Từ Liêm</td><td>Chỉ định thầu</td><td>Một giai đoạn, một túi hồ sơ</td><td>Tháng 8/2025</td><td>Hợp đồng trọn gói</td><td>20 ngày</td></tr>
+</table></div>
+
+<hr>
+
+<h2>THUYẾT MINH KẾ HOẠCH LCNT</h2>
+
+<h3>1. Căn cứ pháp lý áp dụng chỉ định thầu</h3>
+
+<p>Toàn bộ 6 gói thầu tư vấn trong giai đoạn CBDA được áp dụng hình thức <strong>chỉ định thầu</strong> theo quy định tại:</p>
+
+<ul>
+<li><strong>Khoản 1 Điều 23 Luật Đấu thầu số 22/2023/QH15</strong>: Gói thầu tư vấn có giá trị không quá <strong>500 triệu đồng</strong> được áp dụng chỉ định thầu;</li>
+<li><strong>Điều 50 Nghị định 24/2024/NĐ-CP</strong>: Quy trình chỉ định thầu thông thường (gói thầu từ 50 triệu đến 500 triệu đồng) và chỉ định thầu rút gọn (gói thầu dưới 50 triệu đồng).</li>
+</ul>
+
+<div class="table-wrap"><table>
+<tr><th>Hình thức</th><th>Áp dụng cho</th><th>Thời gian chuẩn bị HSYC</th><th>Thời gian đánh giá</th></tr>
+<tr><td>Chỉ định thầu rút gọn</td><td>Gói 1, Gói 3 (< 50 triệu)</td><td>3 ngày</td><td>5 ngày</td></tr>
+<tr><td>Chỉ định thầu thông thường</td><td>Gói 2, 4, 5, 6 (50–500 triệu)</td><td>7 ngày</td><td>10 ngày</td></tr>
+</table></div>
+
+<h3>2. Lý do gộp gói thầu</h3>
+
+<ul>
+<li><strong>Gói 1</strong>: Gộp nhiệm vụ khảo sát địa hình và địa chất vào một gói để thuận tiện quản lý, tránh phát sinh thêm chi phí hành chính; tổng giá trị 15,5 triệu < ngưỡng 50 triệu → áp dụng chỉ định thầu rút gọn.</li>
+<li><strong>Gói 4</strong>: Gộp tư vấn chỉ giới đường đỏ và cam kết BVMT vì hai công việc có liên quan mật thiết về thông tin đầu vào, do một đơn vị thực hiện sẽ đảm bảo tính nhất quán.</li>
+<li><strong>Gói 5</strong>: Gộp lập BCKTKT và BIM vì BIM là đầu ra bổ sung của thiết kế, cần được thực hiện bởi cùng đơn vị thiết kế để đảm bảo độ chính xác mô hình.</li>
+</ul>
+
+<h3>3. Yêu cầu năng lực nhà thầu tư vấn</h3>
+
+<div class="table-wrap"><table>
+<tr><th>Gói</th><th>Yêu cầu tối thiểu</th></tr>
+<tr><td>Gói 2 – Khảo sát</td><td>Có chứng chỉ năng lực khảo sát xây dựng hạng II trở lên; đã thực hiện ≥3 dự án khảo sát tương tự tại Hà Nội</td></tr>
+<tr><td>Gói 5 – BCKTKT+BIM</td><td>Có chứng chỉ năng lực thiết kế công trình dân dụng hạng II trở lên; có ít nhất 1 kỹ sư BIM được đào tạo và chứng nhận; đã thực hiện ≥2 dự án cải tạo tương tự</td></tr>
+<tr><td>Gói 6 – Thẩm tra</td><td>Độc lập với đơn vị lập BCKTKT; chứng chỉ năng lực thẩm tra hạng II</td></tr>
+</table></div>
+
+<h3>4. Sơ đồ tiến độ LCNT giai đoạn CBDA</h3>
+
+<pre><code class="language-">
+Tháng 4/2025:  [Gói 1 – Nhiệm vụ KS] → [Gói 2 – Khảo sát địa hình, địa chất]
+                                          [Gói 3 – Giám sát KS] ─────────────→
+Tháng 5/2025:  [Gói 4 – Chỉ giới + MT] → → → → → → → → → → → Kết quả T6
+               [Gói 5 – BCKTKT + BIM] → → → → → → → → → → → → Kết quả T7
+Tháng 8/2025:  [Gói 6 – Thẩm tra] → → → → → → Kết quả T9
+Tháng 9/2025:  Phê duyệt BCKTKT → Hoàn thành giai đoạn CBDA
+</code></pre>
+
+<h3>5. Hệ thống đăng tải thông tin</h3>
+
+<p>Theo quy định tại Điều 8 Luật Đấu thầu 2023, kế hoạch LCNT sau khi được phê duyệt phải được đăng tải trên Hệ thống mạng đấu thầu quốc gia (www.muasamcong.mpi.gov.vn) trong vòng 7 ngày làm việc.</p>
+
+<hr>
+
+<p><em>Lập kế hoạch: Phòng Đấu thầu – Ban QLDA quận Bắc Từ Liêm</em></p>
+<p><em>Ngày lập: 22/03/2025</em></p>
+<p><em>Người lập: CN. Nguyễn Thị Mai</em></p>
+<p><em>Phê duyệt: Giám đốc Ban QLDA – Trần Minh Đức</em></p>
+
+            </article>
+        </main>
+    </div>
+    <script>
+    function toggleMenu() {
+        document.getElementById('sidebar').classList.toggle('open');
+    }
+    </script>
+</body>
+</html>

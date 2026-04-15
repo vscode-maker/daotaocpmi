@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BC Đề Xuất CTrĐT Nhóm C — Đào Tạo AI CPMI</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    
+    <div class="layout">
+        <nav class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h2>Dao Tao AI</h2>
+                <p class="subtitle">Google Gemini & NotebookLM</p>
+                <button class="menu-close" onclick="toggleMenu()">&times;</button>
+            </div>
+            <div class="nav-section"><h3>HOC VIEN</h3><ul><li><a href="/index.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span>Trang chu</a></li><li><a href="/agenda.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span>Lich trinh 2 ngay</a></li></ul></div><div class="nav-section"><h3>HUONG DAN NHANH</h3><ul><li><a href="/qrg-gemini.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M12 2L9 12l-7 3 7 3 3 10 3-10 7-3-7-3z"/></svg></span>Gemini Workspace</a></li><li><a href="/qrg-notebooklm.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>NotebookLM</a></li><li><a href="/prompts.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>Prompt Templates</a></li><li><a href="/checklist.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>Checklist Bao Mat</a></li></ul></div><div class="nav-section"><h3>TAI LIEU THUC HANH</h3><ul><li><a href="/tai-lieu/to-trinh.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>To trinh CTrDT</a></li><li><a href="/tai-lieu/bao-cao.html" class="active"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg></span>BC de xuat CTrDT</a></li><li><a href="/tai-lieu/du-toan.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><circle cx="8" cy="8" r="6"/><path d="M18.09 10.37A6 6 0 1 1 10.34 18"/><line x1="7" y1="6" x2="7.01" y2="6"/><line x1="16" y1="12" x2="16.01" y2="12"/></svg></span>Du toan CBDA</a></li><li><a href="/tai-lieu/ke-hoach-lcnt.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg></span>KH LCNT</a></li><li><a href="/tai-lieu/email.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>Email tham dinh</a></li><li><a href="/tai-lieu/y-kien.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></span>Y kien so nganh</a></li><li><a href="/tai-lieu/nhiem-vu-ks.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>Nhiem vu khao sat</a></li><li><a href="/tai-lieu/khoi-luong.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M21.71 5.29l-3-3a1 1 0 0 0-1.42 0l-14 14a1 1 0 0 0 0 1.42l3 3a1 1 0 0 0 1.42 0l14-14a1 1 0 0 0 0-1.42z"/><line x1="7" y1="13.5" x2="9.5" y2="11"/><line x1="10" y1="10.5" x2="12.5" y2="8"/><line x1="13" y1="7.5" x2="15.5" y2="5"/></svg></span>Khoi luong KS</a></li></ul></div><div class="nav-section"><h3>GIANG VIEN</h3><ul><li><a href="/giang-vien/index.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 3 3 6 3s6-1 6-3v-5"/></svg></span>Portal Giang Vien</a></li><li><a href="/giang-vien/kich-ban-ngay-1.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>Kich ban Ngay 1</a></li><li><a href="/giang-vien/kich-ban-ngay-2.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>Kich ban Ngay 2</a></li><li><a href="/giang-vien/plan.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg></span>Ke hoach tong the</a></li><li><a href="/giang-vien/checklist-to-chuc.html"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></span>Checklist to chuc</a></li></ul></div>
+        </nav>
+        <main class="content">
+            <button class="menu-toggle" onclick="toggleMenu()"><svg viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg> Menu</button>
+            <article>
+                <p>UBND QUẬN BẮC TỪ LIÊM</p>
+<p>BAN QUẢN LÝ DỰ ÁN ĐẦU TƯ XÂY DỰNG QUẬN</p>
+<p>CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</p>
+<p>Độc lập - Tự do - Hạnh phúc</p>
+
+<hr>
+
+<h1>BÁO CÁO ĐỀ XUẤT CHỦ TRƯƠNG ĐẦU TƯ</h1>
+
+<p><strong>Dự án</strong>: Cải tạo nâng cấp Trụ sở UBND phường Đông Ngạc,</p>
+<p>quận Bắc Từ Liêm, thành phố Hà Nội</p>
+
+<p><em>(Lập theo Điều 35 Luật Đầu tư công số 58/2024/QH15 – Dự án nhóm C)</em></p>
+
+<hr>
+
+<h2>PHẦN I: SỰ CẦN THIẾT ĐẦU TƯ</h2>
+
+<h3>1.1. Bối cảnh và hiện trạng</h3>
+
+<p>Trụ sở UBND phường Đông Ngạc được xây dựng năm 1998, nay đã trải qua hơn 27 năm khai thác sử dụng. Qua kiểm tra thực địa ngày 05/02/2025, hiện trạng công trình có nhiều hạng mục xuống cấp nghiêm trọng:</p>
+
+<p><strong>a) Về kết cấu công trình:</strong></p>
+<ul>
+<li>Hệ thống cột, dầm bê tông cốt thép xuất hiện vết nứt dọc và ngang, bề mặt bong tróc lộ cốt thép ở một số vị trí tầng 1 và tầng 2;</li>
+<li>Sàn BTCT tầng 2, tầng 3 có hiện tượng thấm dột; mái bằng BTCT rò rỉ nước tại nhiều điểm, nhất là sau mỗi trận mưa lớn;</li>
+<li>Tường gạch xây có nhiều vết nứt chéo, nứt dọc; lớp vữa trát bong rộp diện rộng.</li>
+</ul>
+
+<p><strong>b) Về hệ thống kỹ thuật:</strong></p>
+<ul>
+<li>Toàn bộ hệ thống điện, chiếu sáng lắp đặt từ năm 1998, đã hết niên hạn sử dụng, không đáp ứng tiêu chuẩn an toàn điện hiện hành (QCVN 12:2014/BCT);</li>
+<li>Đường ống cấp nước gang cũ bị han gỉ, áp lực yếu; đường ống thoát nước PVC bị xệ võng gây tắc nghẽn thường xuyên;</li>
+<li>Chưa có hệ thống PCCC, hoặc có nhưng đã hỏng và không được bảo trì theo quy định.</li>
+</ul>
+
+<p><strong>c) Về công năng sử dụng:</strong></p>
+<ul>
+<li>Tổng diện tích sàn ~800 m² bố trí cho 42 cán bộ, công chức và người hoạt động không chuyên trách; mật độ sử dụng cao, không gian làm việc chật hẹp;</li>
+<li>Chưa có phòng tiếp công dân đạt chuẩn; khu vực bộ phận "một cửa" chật chội, không đảm bảo điều kiện giao dịch;</li>
+<li>Không có thang máy, đường dốc cho người khuyết tật, vi phạm QCVN 10:2022/BXD.</li>
+</ul>
+
+<h3>1.2. Sự cần thiết đầu tư</h3>
+
+<p>Trên cơ sở phân tích hiện trạng, việc đầu tư cải tạo nâng cấp trụ sở là cần thiết và cấp bách vì các lý do sau:</p>
+
+<ul>
+<li><strong>Đảm bảo an toàn</strong>: Kết cấu, điện, PCCC xuống cấp tạo nguy cơ mất an toàn cho cán bộ và người dân đến giao dịch;</li>
+<li><strong>Đáp ứng yêu cầu cải cách hành chính</strong>: Thực hiện Nghị quyết 36/NQ-CP về cải cách thủ tục hành chính, cần xây dựng bộ phận "một cửa" đạt chuẩn;</li>
+<li><strong>Tuân thủ quy chuẩn kỹ thuật</strong>: Cần đưa công trình về trạng thái đáp ứng QCVN 06:2022/BXD (PCCC), QCVN 10:2022/BXD (tiếp cận người khuyết tật);</li>
+<li><strong>Phát huy hiệu quả tài sản công</strong>: Việc duy trì trụ sở kém chất lượng gây lãng phí trong dài hạn so với chi phí cải tạo ngay.</li>
+</ul>
+
+<hr>
+
+<h2>PHẦN II: MỤC TIÊU, QUY MÔ, ĐỊA ĐIỂM ĐẦU TƯ</h2>
+
+<h3>2.1. Mục tiêu đầu tư</h3>
+
+<p><strong>Mục tiêu tổng quát:</strong></p>
+<p>Cải tạo, nâng cấp toàn diện trụ sở UBND phường Đông Ngạc đảm bảo an toàn, khang trang, hiện đại; đáp ứng yêu cầu hoạt động của bộ máy chính quyền cấp phường và phục vụ nhân dân trong giai đoạn 2025–2035.</p>
+
+<p><strong>Mục tiêu cụ thể:</strong></p>
+<ul>
+<li>Gia cố, sửa chữa toàn bộ hệ thống kết cấu chịu lực đảm bảo an toàn sử dụng trong vòng ít nhất 25 năm;</li>
+<li>Cải tạo hoàn thiện kiến trúc 3 tầng, cải tạo mái, sân đường nội bộ;</li>
+<li>Thay thế đồng bộ hệ thống điện, chiếu sáng, điều hòa không khí tiết kiệm năng lượng;</li>
+<li>Lắp đặt hệ thống PCCC đồng bộ đạt tiêu chuẩn QCVN 06:2022/BXD;</li>
+<li>Bố trí lại không gian theo mô hình "một cửa" hiện đại, đảm bảo tiêu chuẩn;</li>
+<li>Lắp đặt thang máy, xây dựng đường dốc đảm bảo tiếp cận cho người khuyết tật;</li>
+<li>Lắp đặt hệ thống camera an ninh, kiểm soát ra vào, chuẩn bị hạ tầng chuyển đổi số.</li>
+</ul>
+
+<h3>2.2. Quy mô đầu tư</h3>
+
+<div class="table-wrap"><table>
+<tr><th>Thông số</th><th>Giá trị</th></tr>
+<tr><td>Diện tích khuôn viên</td><td>~1.200 m²</td></tr>
+<tr><td>Số tầng</td><td>3 tầng + tầng mái</td></tr>
+<tr><td>Tổng diện tích sàn cải tạo</td><td>~800 m²</td></tr>
+<tr><td>Chiều cao công trình</td><td>~12,5 m</td></tr>
+<tr><td>Loại, cấp công trình</td><td>Dân dụng – Cấp III</td></tr>
+<tr><td>Niên hạn sử dụng mục tiêu</td><td>25 năm (2026–2051)</td></tr>
+</table></div>
+
+<p><strong>Danh mục hạng mục cải tạo:</strong></p>
+
+<div class="table-wrap"><table>
+<tr><th>STT</th><th>Hạng mục</th><th>Phạm vi</th></tr>
+<tr><td>1</td><td>Kết cấu chịu lực</td><td>Toàn bộ công trình</td></tr>
+<tr><td>2</td><td>Hoàn thiện kiến trúc</td><td>Toàn bộ 3 tầng, mái</td></tr>
+<tr><td>3</td><td>Hệ thống điện, chiếu sáng</td><td>Toàn bộ công trình</td></tr>
+<tr><td>4</td><td>Điều hòa không khí</td><td>Toàn bộ công trình</td></tr>
+<tr><td>5</td><td>Cấp thoát nước, vệ sinh</td><td>Toàn bộ công trình</td></tr>
+<tr><td>6</td><td>PCCC</td><td>Toàn bộ công trình</td></tr>
+<tr><td>7</td><td>Thang máy</td><td>1 cabin, 630 kg</td></tr>
+<tr><td>8</td><td>Sân đường, hạ tầng ngoài nhà</td><td>Khuôn viên ~1.200 m²</td></tr>
+<tr><td>9</td><td>Camera, kiểm soát ra vào</td><td>Toàn bộ công trình</td></tr>
+</table></div>
+
+<h3>2.3. Địa điểm đầu tư</h3>
+
+<ul>
+<li><strong>Địa chỉ</strong>: Số 1 phố Đông Ngạc, phường Đông Ngạc, quận Bắc Từ Liêm, Hà Nội</li>
+<li><strong>Vị trí</strong>: Trên khu đất đã có công trình hiện hữu; không phát sinh giải phóng mặt bằng</li>
+<li><strong>Tiếp giáp</strong>: Phía Bắc giáp đường Đông Ngạc; phía Nam giáp nhà dân; phía Đông giáp ngõ nội bộ; phía Tây giáp khuôn viên trường học</li>
+<li><strong>Điều kiện địa lý</strong>: Địa hình tương đối bằng phẳng; nền đất ổn định; kết nối hạ tầng kỹ thuật thuận lợi</li>
+</ul>
+
+<hr>
+
+<h2>PHẦN III: DỰ KIẾN TỔNG MỨC ĐẦU TƯ VÀ CƠ CẤU NGUỒN VỐN</h2>
+
+<h3>3.1. Tổng mức đầu tư sơ bộ</h3>
+
+<p>Tổng mức đầu tư sơ bộ được tính toán theo phương pháp suất vốn đầu tư xây dựng công trình cải tạo dân dụng do Bộ Xây dựng công bố (Quyết định số 610/QĐ-BXD ngày 30/5/2024), điều chỉnh theo hệ số vùng Hà Nội:</p>
+
+<div class="table-wrap"><table>
+<tr><th>STT</th><th>Khoản mục chi phí</th><th>Dự kiến (đồng)</th><th>Tỷ lệ (%)</th></tr>
+<tr><td>1</td><td>Chi phí xây dựng (XD)</td><td>11.500.000.000</td><td>76,7</td></tr>
+<tr><td>2</td><td>Chi phí thiết bị (TB)</td><td>1.200.000.000</td><td>8,0</td></tr>
+<tr><td>3</td><td>Chi phí quản lý dự án (QLDA)</td><td>380.000.000</td><td>2,5</td></tr>
+<tr><td>4</td><td>Chi phí tư vấn đầu tư xây dựng (TV)</td><td>950.000.000</td><td>6,3</td></tr>
+<tr><td>5</td><td>Chi phí khác</td><td>420.000.000</td><td>2,8</td></tr>
+<tr><td>6</td><td>Chi phí dự phòng (10%)</td><td>550.000.000</td><td>3,7</td></tr>
+<tr><td><strong>Tổng</strong></td><td></td><td><strong>15.000.000.000</strong></td><td><strong>100</strong></td></tr>
+</table></div>
+
+<p><em>(Chữ: Mười lăm tỷ đồng chẵn)</em></p>
+
+<p><strong>Lưu ý</strong>: Tổng mức đầu tư sơ bộ trên đây được xác định ở giai đoạn chủ trương đầu tư, chưa qua khảo sát và thiết kế. Tổng mức đầu tư chính thức sẽ được xác định sau khi có kết quả khảo sát, thiết kế và thẩm định theo quy định.</p>
+
+<h3>3.2. Cơ cấu nguồn vốn</h3>
+
+<div class="table-wrap"><table>
+<tr><th>Nguồn vốn</th><th>Giá trị (đồng)</th><th>Tỷ lệ (%)</th></tr>
+<tr><td>Ngân sách quận Bắc Từ Liêm</td><td>15.000.000.000</td><td>100</td></tr>
+<tr><td>Vốn vay, huy động khác</td><td>0</td><td>0</td></tr>
+<tr><td><strong>Tổng</strong></td><td><strong>15.000.000.000</strong></td><td><strong>100</strong></td></tr>
+</table></div>
+
+<p>Việc bố trí vốn thuộc thẩm quyền HĐND quận Bắc Từ Liêm theo quy định tại Điều 9 Luật Đầu tư công số 58/2024/QH15.</p>
+
+<h3>3.3. Kế hoạch phân bổ vốn hàng năm</h3>
+
+<div class="table-wrap"><table>
+<tr><th>Năm ngân sách</th><th>Nội dung chi</th><th>Dự kiến vốn (đồng)</th></tr>
+<tr><td>2025</td><td>Chi phí chuẩn bị đầu tư: khảo sát, lập BCKTKT, thẩm định, phê duyệt</td><td>950.000.000</td></tr>
+<tr><td>2026</td><td>Chi phí thực hiện dự án: xây lắp, thiết bị, QLDA, tư vấn giám sát, chi phí khác</td><td>14.050.000.000</td></tr>
+<tr><td><strong>Tổng</strong></td><td></td><td><strong>15.000.000.000</strong></td></tr>
+</table></div>
+
+<hr>
+
+<h2>PHẦN IV: TIẾN ĐỘ THỰC HIỆN DỰ KIẾN</h2>
+
+<div class="table-wrap"><table>
+<tr><th>Giai đoạn</th><th>Nội dung công việc chính</th><th>Thời gian dự kiến</th></tr>
+<tr><td><strong>Giai đoạn 1: CBDA</strong></td><td>Phê duyệt CTrĐT; khảo sát địa hình, địa chất; lập BCKTKT; thẩm định, phê duyệt BCKTKT</td><td>Tháng 4/2025 – Tháng 9/2025</td></tr>
+<tr><td><strong>Giai đoạn 2: LCNT</strong></td><td>Lập, thẩm định, phê duyệt HSMT; tổ chức LCNT nhà thầu xây lắp; ký kết hợp đồng</td><td>Tháng 10/2025 – Tháng 12/2025</td></tr>
+<tr><td><strong>Giai đoạn 3: Thi công</strong></td><td>Thi công xây dựng, lắp đặt thiết bị; giám sát tác giả, giám sát thi công</td><td>Tháng 1/2026 – Tháng 9/2026</td></tr>
+<tr><td><strong>Giai đoạn 4: Hoàn thành</strong></td><td>Nghiệm thu, bàn giao công trình; lập và phê duyệt quyết toán</td><td>Tháng 10/2026 – Tháng 12/2026</td></tr>
+</table></div>
+
+<p><strong>Tổng thời gian thực hiện dự án</strong>: 21 tháng (Tháng 4/2025 – Tháng 12/2026)</p>
+
+<hr>
+
+<h2>PHẦN V: PHÂN TÍCH SƠ BỘ HIỆU QUẢ ĐẦU TƯ</h2>
+
+<h3>5.1. Hiệu quả kinh tế</h3>
+
+<p>Dự án không mang lại doanh thu trực tiếp (tính chất công trình phúc lợi công cộng). Hiệu quả kinh tế được đánh giá gián tiếp:</p>
+
+<ul>
+<li><strong>Tránh chi phí sửa chữa đột xuất</strong>: Nếu không đầu tư, ước tính chi phí sửa chữa sự cố phát sinh 3–5 năm tới khoảng 2–3 tỷ đồng/lần, không bền vững;</li>
+<li><strong>Tiết kiệm điện năng</strong>: Thay thế hệ thống điều hòa, chiếu sáng LED hiệu suất cao, ước tính tiết kiệm 25–30% chi phí điện, tương đương ~50–60 triệu đồng/năm;</li>
+<li><strong>Giảm chi phí bảo trì hàng năm</strong>: Sau cải tạo, chi phí bảo trì dự kiến giảm khoảng 40% so với hiện tại.</li>
+</ul>
+
+<h3>5.2. Hiệu quả xã hội</h3>
+
+<ul>
+<li>Phục vụ ~25.000 dân trên địa bàn phường với chất lượng dịch vụ hành chính được cải thiện đáng kể;</li>
+<li>Tạo môi trường làm việc an toàn, tiện nghi cho 42 cán bộ, công chức, người hoạt động không chuyên trách;</li>
+<li>Tăng độ tin tưởng của người dân đối với bộ máy chính quyền địa phương;</li>
+<li>Đảm bảo tiếp cận bình đẳng cho người khuyết tật, người cao tuổi khi đến giao dịch hành chính.</li>
+</ul>
+
+<h3>5.3. Hiệu quả về quản lý nhà nước</h3>
+
+<ul>
+<li>Hiện đại hóa hạ tầng chính quyền cấp phường, góp phần triển khai chính phủ điện tử tại cơ sở;</li>
+<li>Đáp ứng yêu cầu xây dựng phường đạt chuẩn đô thị văn minh theo tiêu chí của thành phố Hà Nội;</li>
+<li>Nâng cao hình ảnh bộ máy hành chính chuyên nghiệp, hiện đại.</li>
+</ul>
+
+<hr>
+
+<h2>PHẦN VI: KẾT LUẬN VÀ KIẾN NGHỊ</h2>
+
+<p>Trên cơ sở phân tích tại các phần trên, Ban Quản lý dự án đầu tư xây dựng quận Bắc Từ Liêm kính trình UBND quận xem xét, quyết định phê duyệt chủ trương đầu tư dự án với các nội dung chủ yếu:</p>
+
+<ul>
+<li><strong>Tên dự án</strong>: Cải tạo nâng cấp Trụ sở UBND phường Đông Ngạc, quận Bắc Từ Liêm, thành phố Hà Nội</li>
+<li><strong>Chủ đầu tư</strong>: UBND phường Đông Ngạc (BQLDA quận Bắc Từ Liêm thực hiện vai trò đại diện chủ đầu tư)</li>
+<li><strong>Nhóm dự án</strong>: Nhóm C</li>
+<li><strong>Tổng mức đầu tư</strong>: 15.000.000.000 đồng (mười lăm tỷ đồng)</li>
+<li><strong>Nguồn vốn</strong>: Ngân sách quận Bắc Từ Liêm</li>
+<li><strong>Thời gian thực hiện</strong>: 2025–2026</li>
+<li><strong>Địa điểm</strong>: Số 1 phố Đông Ngạc, phường Đông Ngạc, quận Bắc Từ Liêm, Hà Nội</li>
+</ul>
+
+<hr>
+
+<p><em>Hà Nội, ngày 20 tháng 03 năm 2025</em></p>
+
+<div class="table-wrap"><table>
+<tr><th></th><th><strong>GIÁM ĐỐC BAN QLDA</strong></th></tr>
+<tr><td></td><td><em>(đã ký)</em></td></tr>
+<tr><td></td><td><strong>Trần Minh Đức</strong></td></tr>
+</table></div>
+
+<hr>
+
+<p><em>Tài liệu đính kèm:</em></p>
+<ul>
+<li><em>Phụ lục 1: Bảng tính tổng mức đầu tư sơ bộ</em></li>
+<li><em>Phụ lục 2: Bản vẽ hiện trạng công trình (sơ họa)</em></li>
+<li><em>Phụ lục 3: Biên bản kiểm tra hiện trạng ngày 05/02/2025</em></li>
+</ul>
+
+            </article>
+        </main>
+    </div>
+    <script>
+    function toggleMenu() {
+        document.getElementById('sidebar').classList.toggle('open');
+    }
+    </script>
+</body>
+</html>
