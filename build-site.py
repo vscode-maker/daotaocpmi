@@ -207,12 +207,33 @@ def wrap_page(title, body_html, nav_html, is_gv=False):
     }})();
     </script>"""
 
+    og_title = f"{title} — Đào Tạo AI CPMI"
+    og_desc = "Chương trình đào tạo ứng dụng AI (Google Gemini & NotebookLM) cho ngành xây dựng và quản lý dự án. Tài liệu hướng dẫn, prompt templates, bài tập thực hành quy trình CBDA."
+    og_img = "https://cpmi.vn/uploads/banners/22-logo.png"
+
     return f"""<!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{title} — Đào Tạo AI CPMI</title>
+    <title>{og_title}</title>
+    <meta name="description" content="{og_desc}">
+    <meta name="author" content="CPMI - Công ty CP Quản lý dự án và Đầu tư xây dựng">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{og_title}">
+    <meta property="og:description" content="{og_desc}">
+    <meta property="og:image" content="{og_img}">
+    <meta property="og:locale" content="vi_VN">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{og_title}">
+    <meta name="twitter:description" content="{og_desc}">
+    <meta name="twitter:image" content="{og_img}">
+
+    <link rel="icon" type="image/png" href="{og_img}">
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
@@ -220,23 +241,42 @@ def wrap_page(title, body_html, nav_html, is_gv=False):
     <div class="layout">
         <nav class="sidebar" id="sidebar">
             <div class="sidebar-header">
-                <h2>Đào Tạo AI</h2>
-                <p class="subtitle">Google Gemini & NotebookLM</p>
-                <button class="menu-close" onclick="toggleMenu()">&times;</button>
+                <a href="/" class="logo-link">
+                    <img src="https://cpmi.vn/uploads/banners/22-logo.png" alt="CPMI Logo" class="logo-img">
+                </a>
+                <div class="header-text">
+                    <span class="brand-name">Đào Tạo AI</span>
+                    <span class="brand-sub">CPMI &middot; Gemini &middot; NotebookLM</span>
+                </div>
+                <button class="menu-close" onclick="toggleMenu()" aria-label="Đóng menu">&times;</button>
             </div>
             {nav_html}
+            <div class="sidebar-footer">
+                <p>&copy; 2026 CPMI</p>
+            </div>
         </nav>
         <main class="content">
-            <button class="menu-toggle" onclick="toggleMenu()">{ICONS["menu"]} Menu</button>
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Mở menu">{ICONS["menu"]} Menu</button>
             <article>
                 {body_html}
             </article>
+            <footer class="content-footer">
+                <p>CPMI &mdash; Công ty CP Quản lý dự án và Đầu tư xây dựng</p>
+            </footer>
         </main>
     </div>
     <script>
     function toggleMenu() {{
         document.getElementById('sidebar').classList.toggle('open');
     }}
+    // Close sidebar on click outside (mobile)
+    document.addEventListener('click', function(e) {{
+        var sb = document.getElementById('sidebar');
+        var toggle = document.querySelector('.menu-toggle');
+        if (sb.classList.contains('open') && !sb.contains(e.target) && !toggle.contains(e.target)) {{
+            sb.classList.remove('open');
+        }}
+    }});
     </script>
 </body>
 </html>"""
