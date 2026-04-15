@@ -220,7 +220,7 @@ def wrap_page(title, body_html, nav_html, is_gv=False):
     <div class="layout">
         <nav class="sidebar" id="sidebar">
             <div class="sidebar-header">
-                <h2>Dao Tao AI</h2>
+                <h2>Đào Tạo AI</h2>
                 <p class="subtitle">Google Gemini & NotebookLM</p>
                 <button class="menu-close" onclick="toggleMenu()">&times;</button>
             </div>
@@ -245,32 +245,32 @@ def wrap_page(title, body_html, nav_html, is_gv=False):
 def build_nav(current_page=""):
     """Build sidebar navigation HTML."""
     sections = [
-        ("HOC VIEN", [
-            ("index.html", "home", "Trang chu"),
-            ("agenda.html", "calendar", "Lich trinh 2 ngay"),
+        ("HỌC VIÊN", [
+            ("index.html", "home", "Trang chủ"),
+            ("agenda.html", "calendar", "Lịch trình 2 ngày"),
         ]),
-        ("HUONG DAN NHANH", [
+        ("HƯỚNG DẪN NHANH", [
             ("qrg-gemini.html", "sparkles", "Gemini Workspace"),
             ("qrg-notebooklm.html", "book-open", "NotebookLM"),
             ("prompts.html", "message", "Prompt Templates"),
-            ("checklist.html", "shield", "Checklist Bao Mat"),
+            ("checklist.html", "shield", "Checklist Bảo Mật"),
         ]),
-        ("TAI LIEU THUC HANH", [
-            ("tai-lieu/to-trinh.html", "file-text", "To trinh CTrDT"),
-            ("tai-lieu/bao-cao.html", "clipboard", "BC de xuat CTrDT"),
-            ("tai-lieu/du-toan.html", "coins", "Du toan CBDA"),
+        ("TÀI LIỆU THỰC HÀNH", [
+            ("tai-lieu/to-trinh.html", "file-text", "Tờ trình CTrĐT"),
+            ("tai-lieu/bao-cao.html", "clipboard", "BC đề xuất CTrĐT"),
+            ("tai-lieu/du-toan.html", "coins", "Dự toán CBDA"),
             ("tai-lieu/ke-hoach-lcnt.html", "bar-chart", "KH LCNT"),
-            ("tai-lieu/email.html", "mail", "Email tham dinh"),
-            ("tai-lieu/y-kien.html", "edit", "Y kien so nganh"),
-            ("tai-lieu/nhiem-vu-ks.html", "search", "Nhiem vu khao sat"),
-            ("tai-lieu/khoi-luong.html", "ruler", "Khoi luong KS"),
+            ("tai-lieu/email.html", "mail", "Email thẩm định"),
+            ("tai-lieu/y-kien.html", "edit", "Ý kiến sở ngành"),
+            ("tai-lieu/nhiem-vu-ks.html", "search", "Nhiệm vụ khảo sát"),
+            ("tai-lieu/khoi-luong.html", "ruler", "Khối lượng KS"),
         ]),
-        ("GIANG VIEN", [
-            ("giang-vien/index.html", "graduation", "Portal Giang Vien"),
-            ("giang-vien/kich-ban-ngay-1.html", "book-open", "Kich ban Ngay 1"),
-            ("giang-vien/kich-ban-ngay-2.html", "book-open", "Kich ban Ngay 2"),
-            ("giang-vien/plan.html", "clipboard", "Ke hoach tong the"),
-            ("giang-vien/checklist-to-chuc.html", "check-circle", "Checklist to chuc"),
+        ("GIẢNG VIÊN", [
+            ("giang-vien/index.html", "graduation", "Portal Giảng Viên"),
+            ("giang-vien/kich-ban-ngay-1.html", "book-open", "Kịch bản Ngày 1"),
+            ("giang-vien/kich-ban-ngay-2.html", "book-open", "Kịch bản Ngày 2"),
+            ("giang-vien/plan.html", "clipboard", "Kế hoạch tổng thể"),
+            ("giang-vien/checklist-to-chuc.html", "check-circle", "Checklist tổ chức"),
         ]),
     ]
 
@@ -311,55 +311,55 @@ def build_page(md_path, output_path, title, page_key, is_gv=False):
 def build_index():
     """Build homepage."""
     body = f"""
-    <h1>Chuong Trinh Dao Tao Ung Dung AI</h1>
-    <p class="lead">Google Gemini & NotebookLM cho Cong Ty Thau Xay Dung</p>
+    <h1>Chương Trình Đào Tạo Ứng Dụng AI</h1>
+    <p class="lead">Google Gemini & NotebookLM cho Công Ty Thầu Xây Dựng</p>
 
     <div class="card-grid">
         <a href="/agenda.html" class="card">
             {card_icon("calendar")}
-            <h3>Lich Trinh 2 Ngay</h3>
-            <p>Agenda chi tiet Ngay 1 + Ngay 2, buoi chieu 13:30-16:30</p>
+            <h3>Lịch Trình 2 Ngày</h3>
+            <p>Agenda chi tiết Ngày 1 + Ngày 2, buổi chiều 13:30–16:30</p>
         </a>
         <a href="/qrg-gemini.html" class="card">
             {card_icon("sparkles")}
             <h3>Gemini Workspace</h3>
-            <p>Huong dan nhanh: Docs, Gmail, Sheets, Slides</p>
+            <p>Hướng dẫn nhanh: Docs, Gmail, Sheets, Slides</p>
         </a>
         <a href="/qrg-notebooklm.html" class="card">
             {card_icon("book-open")}
             <h3>NotebookLM</h3>
-            <p>Huong dan nhanh: Upload, hoi dap, Audio Overview</p>
+            <p>Hướng dẫn nhanh: Upload, hỏi đáp, Audio Overview</p>
         </a>
         <a href="/prompts.html" class="card">
             {card_icon("message")}
             <h3>Prompt Templates</h3>
-            <p>24 prompt mau cho nganh xay dung & QLDA</p>
+            <p>24 prompt mẫu cho ngành xây dựng & QLDA</p>
         </a>
         <a href="/checklist.html" class="card">
             {card_icon("shield")}
-            <h3>Checklist Bao Mat</h3>
-            <p>5 NEN + 5 KHONG khi su dung AI</p>
+            <h3>Checklist Bảo Mật</h3>
+            <p>5 NÊN + 5 KHÔNG khi sử dụng AI</p>
         </a>
         <a href="/tai-lieu/to-trinh.html" class="card">
             {card_icon("folder")}
-            <h3>Tai Lieu Thuc Hanh</h3>
-            <p>8 tai lieu mau: to trinh, du toan, KH LCNT...</p>
+            <h3>Tài Liệu Thực Hành</h3>
+            <p>8 tài liệu mẫu: tờ trình, dự toán, KH LCNT...</p>
         </a>
     </div>
 
     <div class="info-box">
-        <h3>Thong tin dao tao</h3>
+        <h3>Thông tin đào tạo</h3>
         <ul>
-            <li><strong>Thoi luong:</strong> 2 buoi chieu x 3 tieng (13:30-16:30)</li>
-            <li><strong>Doi tuong:</strong> Nhan vien van phong tat ca phong ban</li>
-            <li><strong>Cong cu:</strong> Google Gemini, NotebookLM, Google Workspace</li>
-            <li><strong>Ngay 1:</strong> Lam chu cong cu AI</li>
-            <li><strong>Ngay 2:</strong> Ung dung quy trinh CBDA</li>
+            <li><strong>Thời lượng:</strong> 2 buổi chiều x 3 tiếng (13:30–16:30)</li>
+            <li><strong>Đối tượng:</strong> Nhân viên văn phòng tất cả phòng ban</li>
+            <li><strong>Công cụ:</strong> Google Gemini, NotebookLM, Google Workspace</li>
+            <li><strong>Ngày 1:</strong> Làm chủ công cụ AI</li>
+            <li><strong>Ngày 2:</strong> Ứng dụng quy trình CBDA</li>
         </ul>
     </div>
 
     <div class="gv-link">
-        <a href="/giang-vien/index.html">{ICONS["lock"]} Khu vuc Giang vien</a>
+        <a href="/giang-vien/index.html">{ICONS["lock"]} Khu vực Giảng viên</a>
     </div>
     """
     nav = build_nav("index.html")
@@ -373,26 +373,26 @@ def build_index():
 def build_agenda():
     """Build agenda page from plan.md summary."""
     body = """
-    <h1>Lich Trinh Dao Tao 2 Ngay</h1>
+    <h1>Lịch Trình Đào Tạo 2 Ngày</h1>
 
-    <h2>Ngay 1 (13:30-16:30): Lam Chu Cong Cu AI Google</h2>
+    <h2>Ngày 1 (13:30–16:30): Làm Chủ Công Cụ AI Google</h2>
     <div class="table-wrap"><table>
     <tr><th>Thời gian</th><th>Phiên</th><th>TL</th><th>Nội dung</th></tr>
     <tr><td>13:30–13:45</td><td><strong>Khai mạc + Demo WOW</strong></td><td>15'</td><td>Demo LIVE NotebookLM + Gemini Docs</td></tr>
     <tr><td>13:45–14:15</td><td><strong>Workshop Gemini Docs</strong></td><td>30'</td><td>Soạn tờ trình + tóm tắt văn bản</td></tr>
     <tr><td>14:15–14:35</td><td><strong>Demo Gmail + Sheets</strong></td><td>20'</td><td>Email hành chính + phân tích dự toán</td></tr>
-    <tr><td>14:35-14:45</td><td><em>Giai lao</em></td><td>10'</td><td></td></tr>
+    <tr><td>14:35–14:45</td><td><em>Giải lao</em></td><td>10'</td><td></td></tr>
     <tr><td>14:45–15:30</td><td><strong>Workshop NotebookLM</strong></td><td>45'</td><td>Upload PL, hỏi đáp, Audio Overview</td></tr>
     <tr><td>15:30–16:00</td><td><strong>Bài tập tổng hợp</strong></td><td>30'</td><td>Mô phỏng 2 bước CBDA (nhóm)</td></tr>
     <tr><td>16:00–16:30</td><td><strong>Q&A + Wrap-up</strong></td><td>30'</td><td>Tips, bài tập về nhà</td></tr>
     </table></div>
 
-    <h2>Ngay 2 (13:30-16:30): Ung Dung Quy Trinh CBDA</h2>
+    <h2>Ngày 2 (13:30–16:30): Ứng Dụng Quy Trình CBDA</h2>
     <div class="table-wrap"><table>
     <tr><th>Thời gian</th><th>Phiên</th><th>TL</th><th>Nội dung</th></tr>
     <tr><td>13:30–13:40</td><td><strong>Ôn tập nhanh</strong></td><td>10'</td><td>Quiz + chia sẻ bài tập về nhà</td></tr>
     <tr><td>13:40–14:20</td><td><strong>Lab nhóm phòng ban</strong></td><td>40'</td><td>4 nhóm (KT, HC, ĐT, TH) thực hành nghiệp vụ</td></tr>
-    <tr><td>14:20-14:30</td><td><em>Giai lao</em></td><td>10'</td><td></td></tr>
+    <tr><td>14:20–14:30</td><td><em>Giải lao</em></td><td>10'</td><td></td></tr>
     <tr><td>14:30–15:30</td><td><strong>Mô phỏng CBDA E2E</strong></td><td>60'</td><td>Dự án "Cải tạo trụ sở UBND" — 3 bước</td></tr>
     <tr><td>15:30–15:45</td><td><strong>Trình bày nhanh</strong></td><td>15'</td><td>1-2 nhóm demo sản phẩm</td></tr>
     <tr><td>15:45–16:05</td><td><strong>Bảo mật + KH 30 ngày</strong></td><td>20'</td><td>Checklist BM, ghép buddy, nhóm chat</td></tr>
@@ -410,29 +410,29 @@ def build_agenda():
 def build_gv_index():
     """Build instructor portal index."""
     body = f"""
-    <h1>Khu Vuc Giang Vien</h1>
-    <p class="lead">Tai lieu noi bo -- kich ban, ke hoach, checklist to chuc.</p>
+    <h1>Khu Vực Giảng Viên</h1>
+    <p class="lead">Tài liệu nội bộ — kịch bản, kế hoạch, checklist tổ chức.</p>
 
     <div class="card-grid">
         <a href="/giang-vien/kich-ban-ngay-1.html" class="card">
             {card_icon("book-open")}
-            <h3>Kich Ban Ngay 1</h3>
-            <p>Script phut-by-phut 6 phien, phan cong GV/tro giang</p>
+            <h3>Kịch Bản Ngày 1</h3>
+            <p>Script phút-by-phút 6 phiên, phân công GV/trợ giảng</p>
         </a>
         <a href="/giang-vien/kich-ban-ngay-2.html" class="card">
             {card_icon("book-open")}
-            <h3>Kich Ban Ngay 2</h3>
-            <p>Lab PB + CBDA E2E + be mac, script chi tiet</p>
+            <h3>Kịch Bản Ngày 2</h3>
+            <p>Lab PB + CBDA E2E + bế mạc, script chi tiết</p>
         </a>
         <a href="/giang-vien/plan.html" class="card">
             {card_icon("clipboard")}
-            <h3>Ke Hoach Tong The</h3>
-            <p>8 phases, timeline T-14 -- D+30</p>
+            <h3>Kế Hoạch Tổng Thể</h3>
+            <p>8 phases, timeline T-14 — D+30</p>
         </a>
         <a href="/giang-vien/checklist-to-chuc.html" class="card">
             {card_icon("check-circle")}
-            <h3>Checklist To Chuc</h3>
-            <p>T-14 -- D-day, ngan sach, phan cong</p>
+            <h3>Checklist Tổ Chức</h3>
+            <p>T-14 — D-day, ngân sách, phân công</p>
         </a>
     </div>
     """
